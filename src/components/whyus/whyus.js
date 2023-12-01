@@ -7,6 +7,7 @@ import s from "./style.module.css";
 import "../../style.css";
 
 const WhyUs = () => {
+  const videoId = "JM1YhG9MPxs"; // Extracted from the YouTube URL
   return (
     <div className={s.whyusPage}>
       <Grid container>
@@ -14,7 +15,7 @@ const WhyUs = () => {
           <iframe
             width="100%"
             height="500"
-            src="https://www.youtube.com/watch?v=JM1YhG9MPxs&ab_channel=tazzm3"
+            src={`https://www.youtube.com/embed/${videoId}`}
             frameBorder="0"
             allowFullScreen
             title="YouTube Video"
