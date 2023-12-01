@@ -1,0 +1,49 @@
+.about1 {
+  /* margin: 15%;
+    margin-top: 50px;
+    margin-bottom: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 50px 8% auto 15%;
+  padding: 0px 10px;
+}
+
+.aboutBtn {
+  background-color: rgb(164, 164, 164);
+  width: 150px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: rgb(4, 9, 101);
+}
+
+.aboutUsHeading {
+  margin-top: 30px;
+  color: rgb(4, 9, 101);
+}
+.aboutUsPara {
+  margin-top: 30px;
+  color: rgb(4, 9, 101);
+  line-height: 1.5;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .about1 {
+    margin: 8%;
+  }
+}
+@media (max-width: 300px) {
+  .aboutUsPara {
+    line-height: 1.3;
+  }
+}
+
+/* coppied */
+.sliderBtn {
+  color: white;
+  border-radius: 15px;
+  background-color: rgb(1, 1, 115);
+  padding: 4px 6px 4px 6px;
+  font-weight: 600;
+}
