@@ -25,31 +25,26 @@ export function AboutUs() {
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 8, md: 10 }}
         direction={{ xs: "column", lg: "row", md: "row" }}
-        sx={{ backgroundColor: "#e9e9e9" }}
+        sx={{ backgroundColor: "#FFF5E0" }}
       >
         <Grid xs={12} sm={12} lg={6}>
           <div className={s.about1}>
             <span className={s.aboutBtn}>ABOUT CONMIX</span>
-            <h1 className={s.aboutUsHeading}>Alliance For Excellent</h1>
+            <h1 className={s.aboutUsHeading}> United For Excellence</h1>
             <p className={s.aboutUsPara}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda, incidunt id adipisci quia, itaque consectetur nemo sunt
-              illum exercitationem ipsum quaerat, alias officiis? Commodi
-              dolorem est dolorum maxime quibusdam quaerat dolore dicta
-              mollitia, magnam, nemo, soluta eum. Cumque itaque repellendus in
-              asperiores quidem? Nostrum nisi ex, recusandae culpa cupiditate
-              nam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
-              tempore minus hic repudiandae. Mollitia repellat deleniti tenetur
-              repellendus porro eaque eum sapiente dolores voluptates
-              recusandae, excepturi quisquam, rerum illum veniam ipsum hic saepe
-              quos minus dolor laboriosam accusamus quis est Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Alias magni obcaecati
-              maiores at itaque, vero quis minus a cupiditate dolorem minima
-              quam. Similique est doloremque illo veniam praesentium magni
-              laudantium Lorem ipsum dolor, sit amet consectetur adipisicing
-              elit. Perferendis deserunt, placeat nostrum, veniam consectetur
-              perspiciatis odio autem mollitia omnis neque nihil velit alias ex
-              harum facilis sequi dignissimos esse labore?
+              CONMIX RMC (SOMNATH RMC & CEMENT PRODUCTS) company is a reputable
+              manufacturer and supplier of ready-mix concrete in the entire
+              Surat City. For more than 20 years, the company has operated 2 RMC
+              Plants located in Surat, along with numerous quarries and plants
+              located in South Gujarat, under its leading aggregate brand in
+              Surat. Ready mix concrete is CONMIX's primary business. The
+              company creates, produces, and distributes ready-mix concrete
+              following the demands of its clients. With the help of its group
+              of skilled engineers and concrete technologists, the company can
+              provide high-quality, long-lasting concrete for every need. The
+              company operates a state-of-the-art computer controlled batching
+              facility with a combined monthly capacity of about 18,000 cubic
+              metres.
             </p>
           </div>
         </Grid>
@@ -59,15 +54,15 @@ export function AboutUs() {
               <div className="image-stack__item image-stack__item--top">
                 <img
                   class="image"
-                  src="https://images.unsplash.com/photo-1508522750368-d7e3edeba646?auto=format&fit=crop&q=80&w=1469&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
+                  src="https://drive.google.com/uc?id=1Bqqq1E9SGp66-bvvTLH-NHGgPlPgmTDt"
+                  alt="CONMIX ONE"
                 />
               </div>
               <div className="image-stack__item image-stack__item--bottom">
                 <img
                   class="image"
-                  src="https://images.unsplash.com/photo-1527410651988-c2f385ccd3f7?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
+                  src="https://drive.google.com/uc?id=1M6bp8xn6bYmM-iaIzHv-sacVPF7jRNYg"
+                  alt="CONMIX TWO"
                 />
               </div>
             </div>
@@ -117,15 +112,21 @@ export function AboutUs() {
           >
             <span className={s.sliderBtn}>Conmix</span>
             <h2 style={textStyle}>
-              A new era of <span style={highlightStyle}>quality</span> and{" "}
-              <span style={highlightStyle}>timeliness</span> is upon us
+              <span style={highlightStyle}> Punctuality</span> and
+              <span style={highlightStyle}>quality</span> have entered a new
+              age!
             </h2>
             <h1>Trust of Experts</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              eum facere ipsa numquam non dignissimos quidem veritatis nobis
-              molestias at, labore nam nesciunt vero id aspernatur dicta
-              assumenda amet. Qui.
+              Timeliness and quality have entered a new age! At ConMix RMC, we
+              redefine the standards of excellence in ready-mix concrete. Our
+              unwavering commitment to punctuality ensures that your projects
+              stay on track, meeting deadlines with precision. Paired with our
+              relentless dedication to quality, our concrete solutions stand as
+              a testament to durability and reliability. Step into a new era
+              where every pour is a seamless blend of timeliness and
+              uncompromised quality, setting a solid foundation for your
+              success.
             </p>
           </div>
         </Grid>

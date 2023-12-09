@@ -10,21 +10,21 @@
 }
 
 .aboutBtn {
-  background-color: rgb(164, 164, 164);
+  background-color: #fff5e0;
   width: 150px;
   font-weight: 700;
   border-radius: 20px;
   padding: 5px 10px;
-  color: rgb(4, 9, 101);
+  color: #000;
 }
 
 .aboutUsHeading {
   margin-top: 30px;
-  color: rgb(4, 9, 101);
+  color: #000;
 }
 .aboutUsPara {
   margin-top: 30px;
-  color: rgb(4, 9, 101);
+  color: #000;
   line-height: 1.5;
   font-weight: 500;
 }

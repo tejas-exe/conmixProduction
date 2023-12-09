@@ -100,16 +100,17 @@ function Navbar() {
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
+              ml: 5,
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 800,
               letterSpacing: ".3rem",
-              color: "inherit",
               textDecoration: "none",
+              color: "#000",
             }}
           >
-            CONMIX
+            CONMIX RMC
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -167,11 +168,15 @@ function Navbar() {
               fontFamily: "monospace",
               fontWeight: 800,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "#c70039",
               textDecoration: "none",
             }}
           >
-            CONMIX
+            <img
+              src="https://drive.google.com/uc?id=15XnH83PP4JrNnXqCf-A30oq1nYgkpkWy"
+              alt="LOGO"
+              style={{ width: "50px"}}
+            />
           </Typography>
           <Box
             sx={{

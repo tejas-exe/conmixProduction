@@ -5,8 +5,8 @@ import s from "./style.module.css";
 
 export function Home() {
   const images = [
-    "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://plus.unsplash.com/premium_photo-1661913209349-eca68a68dee2?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://drive.google.com/uc?id=1MfIASrtu-FEZf98ctR589YiVOIAv8xII",
+    "https://drive.google.com/uc?id=1kb8D_IQojbMiRCThRek60cYhMKwpFz4o",
   ];
 
   return (
@@ -15,20 +15,29 @@ export function Home() {
         <div
           style={{
             height: 600,
-            background: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.35)), url(${images[0]})no-repeat center / cover`,
+            background: `linear-gradient(rgba(255,255,255,0.4), rgba(0,0,0,0.8)), url(${images[0]})no-repeat center / cover`,
           }}
         >
-          <div className={s.parent}>
-            <span className={s.sliderBtn}>CONMIX RMC</span>
-            <h2 className={s.sliderHeading}>Unbreakable and long lasting</h2>
-            <h1 className={s.sliderHeading2}>Trust of Experts</h1>
+          <div
+            className={s.parent}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              height: "100%",
+            }}
+          >
+            <span className={s.sliderBtn}>Conmix</span>
+            <h2 className={s.sliderHeading}>Building Tomorrow</h2>
+            <h1 className={s.sliderHeading2}>
+              Your Trusted Ready-Mix Concrete Partner
+            </h1>
             <p className={s.sliderContent}>
-              Welcome to CONMIX RMC, a trusted name in Ready Mix Concrete (RMC).
-              With 20+ years of excellence, we operate two advanced plants in
-              Surat and leading aggregate facilities in South Gujarat. Our
-              expert team delivers high-performance RMC tailored to your needs.
-              Our modern batching plant has a monthly capacity of 18,000 cubic
-              meters. Choose CONMIX RMC for quality and innovation!
+              Discover the foundation of success with our ready-mix concrete
+              solutions. As your trusted partner in construction, we deliver not
+              just concrete but the promise of durability, innovation, and a
+              steadfast commitment to building a brighter tomorrow. Explore how
+              our expertise elevates your projects to new heights
             </p>
           </div>
         </div>
@@ -37,22 +46,30 @@ export function Home() {
         <div
           style={{
             height: 600,
-            background: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.35)), url(${images[1]})no-repeat center / cover`,
+            background: `linear-gradient(rgba(255,255,255,0.4), rgba(0,0,0,0.8)), url(${images[1]})no-repeat center / cover`,
           }}
         >
-          <div className={s.parent}>
+          <div
+            className={s.parent}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              height: "100%",
+            }}
+          >
             <span className={s.sliderBtn}>Conmix</span>
-            <h2 className={s.sliderHeading}>Best ready mix concrete for</h2>
-            <h1 className={s.sliderHeading2}>Strong construction</h1>
+            <h2 className={s.sliderHeading}>Strength in Every Pour</h2>
+            <h1 className={s.sliderHeading2}>
+              Unleashing the Power of Ready-Mix Concret
+            </h1>
             <p className={s.sliderContent}>
-              CONMIX upholds rigorous quality standards in design, development,
-              production, installation, and service, meeting international
-              benchmarks. We are dedicated to enhancing organizational
-              performance, efficiency, and effectiveness. Prioritizing the
-              health, safety, and environmental sustainability of our workforce,
-              we provide top-notch RMC solutions. Choose CONMIX RMC for quality
-              products and reliable services, your one-stop solution for
-              superior concrete needs.
+              Experience the epitome of strength with our ready-mix concrete.
+              Our blend is more than just a mix; it's a powerhouse of
+              reliability and resilience. From the first pour to the finishing
+              touches, our concrete unleashes unmatched power, ensuring your
+              structures stand the test of time. Unleash the strength your
+              projects deserve
             </p>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import Video from "../../assets/video/ConMix Navratri Ad.mp4";
 import VidThumb from "../../assets/video/vidThumb.png";
 
 import s from "./style.module.css";
@@ -26,29 +25,17 @@ const WhyUs = () => {
           <div className={s.whyus}>
             <span className={s.whyusBtn}>WHY ONLY CONMIX</span>
             <h1 className={s.whyusHeading}>
-              Reliability, Trust on final Products
+              Dependability and confidence in our end products
             </h1>
             <p className={s.whyusPara}>
-              <ul>
-                <li>
-                  Provide highest quality products and services at optimum
-                  efficncy.
-                </li>
-                <li>
-                  Ensure that all needs and requirements of customers are
-                  exceeded.
-                </li>
-                <li>Ensure cost-effectiveness.</li>
-                <li>
-                  Continuously improve job performance, processes, products and
-                  services.
-                </li>
-                <li>
-                  Total commitment to quality by top management and all levels
-                  of staff.
-                </li>
-                <li>Ensure that all work is carried out.</li>
-              </ul>{" "}
+              At ConMix RMC, we take pride in fostering dependability and
+              instilling confidence in our end products. Our commitment to
+              excellence is evident in every batch of ready-mix concrete we
+              produce. With a focus on precision and quality assurance, ConMix
+              RMC ensures that your construction projects stand on a foundation
+              of strength, reliability, and the confidence that comes with
+              unmatched dependability. Discover a new level of assurance in
+              every pour with ConMix RMC
             </p>
           </div>
         </Grid>

@@ -54,54 +54,63 @@ function SampleArrow(props) {
 }
 export default function Products() {
   const images = [
-    "https://images.unsplash.com/photo-1508522750368-d7e3edeba646?auto=format&fit=crop&q=80&w=1469&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1508522750368-d7e3edeba646?auto=format&fit=crop&q=80&w=1469&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1508522750368-d7e3edeba646?auto=format&fit=crop&q=80&w=1469&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1508522750368-d7e3edeba646?auto=format&fit=crop&q=80&w=1469&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1508522750368-d7e3edeba646?auto=format&fit=crop&q=80&w=1469&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://drive.google.com/uc?export=view&id=1vqrskxUl4g21ahxm_YiTeS_QZmAOyeBi",
+    "https://drive.google.com/uc?export=view&id=1wUyjkA99YXv4IKSdJRNmpoSDF6joSGjG",
+    "https://drive.google.com/uc?export=view&id=1XY9Agd-_GFhCAMHqNhCOg785iNQpuc-x",
+    "https://drive.google.com/uc?export=view&id=1wmiP9dkKHTERp0YTlZtEmcsBaBpyD5O4",
+    "https://drive.google.com/uc?export=view&id=1Gl6epjuHCE4Fk2J1r197qbkR6rrTpxgM",
+    "https://drive.google.com/uc?export=view&id=1qQszFxxOxPG-iR9WOrQy4w3XBh0QtlC8",
+    "https://drive.google.com/uc?export=view&id=1VCJiFkKymaaE7MNyHtRPJNIQnLR7bLeP",
+    "https://drive.google.com/uc?export=view&id=1tv6c8hH57wkG5wjUufJUTMiO0preSd2B",
   ];
   const drawerDetails = [
     {
       id: "1",
-      title: "title one",
-      details: "details lorem lorem lorem",
+      title: "Manufacturing",
+      details:
+        "Embark on a journey through the heart of ConMix's manufacturing excellence. Our state-of-the-art facilities blend precision and innovation to create ready-mix concrete that sets the standard for quality in the construction industry. Explore the meticulous process that brings your projects to life.",
       image:
-        "https://hexagon.com/-/media/project/one-web/master-site/geo/industries/blockbuster-landing-page/hover-cards/hxgn-blockbuster-hovercard-1.jpg?h=704&iar=0&w=800&hash=40B07BCA35E4189F10CB0DB0185D6E0E",
+        "https://drive.google.com/uc?export=view&id=1KAGT1QwkqThZ9AQBHurRd477vFvuUaad",
     },
     {
       id: "2",
-      title: "title two",
-      details: "details lorem lorem lorem two",
+      title: "Technology",
+      details:
+        "At ConMix, we embrace the forefront of technology to redefine concrete solutions. Dive into a world where cutting-edge innovations and advanced techniques merge, ensuring that every batch of our ready-mix concrete meets and exceeds the demands of modern construction",
       image:
-        "https://www.letsbuild.com/wp-content/uploads/2023/07/construction-site-work-1-1024x647.jpg",
+        "https://drive.google.com/uc?export=view&id=1xgZagB0R2nMuFnmiZhJRuuzTbs_4zHs2",
     },
     {
       id: "3",
-      title: "title one",
-      details: "details lorem lorem lorem",
+      title: "Top Notch Quality",
+      details:
+        "Quality is not just a promise; it's a commitment etched in every cubic meter of ConMix concrete. Learn about our stringent quality control measures that guarantee top-notch durability and reliability. Elevate your projects with concrete that stands the test of time.",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYLtsMMFPokxJG8YV4X4WplPL7G082a0-eWmhFDvobXtpttWsSxrvXQXyggXsGZ3b7Vu8&usqp=CAU",
+        "https://drive.google.com/uc?export=view&id=1BDMWBTr0mDihnmlOHS_haEbkNNwxkUSw",
     },
     {
       id: "4",
-      title: "title one",
-      details: "details lorem lorem lorem",
+      title: "Supplier",
+      details:
+        "Trust ConMix as your reliable partner in construction. As your dedicated supplier, we ensure a seamless and consistent source of ready-mix concrete for your projects. Experience the ConMix advantage—timely deliveries and unwavering quality that fuels your success.",
       image:
-        "https://www.livemint.com/lm-img/img/2023/03/27/600x338/construction_1679940764821_1679940765048_1679940765048.JPG",
+        "https://drive.google.com/uc?export=view&id=1cIQAApwjhGF9XtQU02FNfsU2iUpVmJ4_",
     },
     {
       id: "5",
-      title: "title one",
-      details: "details lorem lorem lorem",
+      title: "Outsource Work",
+      details:
+        "Simplify your construction processes by entrusting ConMix with your concrete needs. Outsource the intricacies of concrete production and delivery to us, allowing you to focus on your core competencies. Discover how ConMix streamlines your construction journey with efficiency and cost-effectiveness.",
       image:
-        "https://cdn-ckgki.nitrocdn.com/eIjtlqSrzAKXFrsHSjkfXOrmttOUeOlc/assets/images/optimized/rev-b7f4dc7/esub.com/wp-content/uploads/2020/05/shutterstock_167443256-e1590519219848.jpg",
+        "https://drive.google.com/uc?export=view&id=12HoLQNs81WvFVtSbDvFDFptL6MGC87Ae",
     },
     {
       id: "6",
-      title: "title one",
-      details: "details lorem lorem lorem",
+      title: "Area of Product Application",
+      details:
+        "Explore the diverse applications of ConMix ready-mix concrete across a spectrum of construction projects. From residential builds to large-scale infrastructure, witness how our concrete seamlessly integrates, providing strength and reliability to every corner of your project. Your vision, our concrete",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTFt5EoPJ0VoO0-WG9uwbFgVNpDL0x9EyWWw&usqp=CAU",
+        "https://drive.google.com/uc?export=view&id=1Fz7eD2I5oPFJXyZRCUowMGD4JICBCh6g",
     },
   ];
   var settings = {

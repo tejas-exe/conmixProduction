@@ -1,40 +1,38 @@
-
-.visitUsGrid{
+.visitUsGrid {
   padding-left: 144px;
-  padding-right:144px;
+  padding-right: 144px;
 }
-.visitusinnerDiv{
+.visitusinnerDiv {
   padding: 30px;
 }
 .contact1 {
- 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
+
   margin: 50px 13% auto 18%;
   padding: 0px 10px;
 }
 
 .contactBtn {
   text-align: center;
-  background-color: rgb(164, 164, 164);
+  background-color: #fff5e0;
   width: 150px;
   font-weight: 700;
   margin: auto;
   border-radius: 20px;
   padding: 5px 10px;
-  color: rgb(4, 9, 101);
+  color: #000;
 }
 /* .mainPaper{
     transition: transform 0.3s ease;
 } */
-.mapPaper{
+.mapPaper {
   padding: "20px  ";
   width: "100%";
-  height: "250px"
+  height: "250px";
 }
-.addressGrid{
+.addressGrid {
   background-color: #dddddd;
   display: flex;
   flex-direction: column;
@@ -106,18 +104,17 @@
     margin: 8%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 1023px)  {
+@media screen and (min-width: 320px) and (max-width: 1023px) {
   .aboutUsPara {
     line-height: 1.3;
   }
-  .visitUsGrid{
+  .visitUsGrid {
     padding-left: 50px;
-    padding-right:50px;
+    padding-right: 50px;
   }
-  .mapPaper{
+  .mapPaper {
     padding: "20px  ";
     width: "100%";
-    height: "500px"
+    height: "500px";
   }
-  
 }

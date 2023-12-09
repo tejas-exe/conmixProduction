@@ -10,20 +10,20 @@
 }
 .productBtn {
   text-align: center;
-  background-color: rgb(164, 164, 164);
+  background-color:#fff5e0;
   width: 150px;
   font-weight: 700;
   margin: auto;
   border-radius: 20px;
   padding: 5px 10px;
-  color: rgb(4, 9, 101);
+  color:#000;
 }
 .productHeading {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 50px;
   font-weight: bolder;
-  color: #0f3c6c;
+  color: black;
 }
 .productcontainer {
   /* text-align: center; */
@@ -35,7 +35,7 @@
   align-items: center;
 }
 
-img.productIMG{
+img.productIMG {
   border: red;
 }
 @media (max-width: 320px) {

@@ -1,13 +1,12 @@
 import { Button, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
-import { Formik,useFormikContext } from "formik";
+import { Formik, useFormikContext } from "formik";
 import * as Yup from "yup";
 import Form from "react-bootstrap/Form";
 import s from "./style.module.css";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 const Contacts = () => {
-
   const validationSchema = Yup.object({
     Name: Yup.string().required("Required!"),
     phoneNumber: Yup.string().required("Required!"),
@@ -26,8 +25,6 @@ const Contacts = () => {
     marginBottom: "2%",
     border: "0px solid",
   };
-
-  
 
   return (
     <div className={s.contactPage}>
@@ -54,33 +51,29 @@ const Contacts = () => {
                 message: "",
               }}
               validationSchema={validationSchema}
-              onSubmit={async(values, onSubmitProps) => {
-                
-                console.log(values,onSubmitProps)
+              onSubmit={async (values, onSubmitProps) => {
+                console.log(values, onSubmitProps);
                 try {
                   // Prevent the default form submission
-                  
-              
+
                   // Access the form element
-                 
-              
+
                   // Your emailjs logic using sendForm
-                  const serviceID = 'service_vyr0aqd';
-                  const templateID = 'template_lxqfxgb';
-                  const userID = 'pBCrn4iPuccR7_7ZN';
-              
+                  const serviceID = "service_vyr0aqd";
+                  const templateID = "template_lxqfxgb";
+                  const userID = "pBCrn4iPuccR7_7ZN";
+
                   // You can use 'values' directly instead of 'event.target'
-                  await emailjs.send(serviceID, templateID,values, userID);
-              
-                  console.log('Email sent successfully!');
+                  await emailjs.send(serviceID, templateID, values, userID);
+
+                  console.log("Email sent successfully!");
                   onSubmitProps.resetForm();
                 } catch (error) {
-                  console.error('Email sending failed:', error);
+                  console.error("Email sending failed:", error);
                 }
               }}
             >
               {(formik) => {
-              
                 return (
                   <Grid container>
                     <Grid xs={12} sm={6} lg={6}>
@@ -162,7 +155,7 @@ const Contacts = () => {
                       placeholder="Write Message"
                       rows={4}
                       style={{ ...textfield, width: "99%" }}
-                    />{" "}
+                    />
                     <Button
                       type="submit"
                       onClick={formik.handleSubmit}
@@ -171,7 +164,7 @@ const Contacts = () => {
                         padding: "auto",
                         width: "99%",
                         height: "50px",
-                        backgroundColor: "#0f3c6c",
+                        backgroundColor: "#c70039",
                         marginBottom: "20px",
                       }}
                     >
@@ -236,7 +229,7 @@ const Contacts = () => {
             elevation={3}
             sx={{ padding: "20px ", width: "100%", height: { lg: "250px" } }}
           >
-             <Grid container sx={{ height: "100%" }} > 
+            <Grid container sx={{ height: "100%" }}>
               <Grid item xs={12} sm={12} lg={9}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.508317843421!2d72.88714477438897!3d21.0922912855951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051403acad945%3A0xb976b1fb1bb3d61d!2sKrishna%20Concrete!5e0!3m2!1sen!2sin!4v1699354432361!5m2!1sen!2sin"
@@ -266,7 +259,7 @@ const Contacts = () => {
                   <br /> Surat, Gujarat 394235
                 </Typography>
               </Grid>
-            </Grid> 
+            </Grid>
           </Paper>
         </Grid>
       </Grid>
