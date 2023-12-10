@@ -6,7 +6,7 @@ import s from "./style.module.css";
 import "../../style.css";
 
 const WhyUs = () => {
-  const videoId = "JM1YhG9MPxs"; // Extracted from the YouTube URL
+  const videoId = "aVvdyjs22W0"; // Extracted from the YouTube URL
   return (
     <div className={s.whyusPage}>
       <Grid container>
@@ -15,7 +15,6 @@ const WhyUs = () => {
             width="100%"
             height="500"
             src={`https://www.youtube.com/embed/${videoId}`}
-            frameBorder="0"
             allowFullScreen
             title="YouTube Video"
             poster={VidThumb}
@@ -23,7 +22,7 @@ const WhyUs = () => {
         </Grid>
         <Grid item xs={12} sm={12} lg={6}>
           <div className={s.whyus}>
-            <span className={s.whyusBtn}>WHY ONLY CONMIX</span>
+            <span className={s.whyusBtn}>Why only Conmix</span>
             <h1 className={s.whyusHeading}>
               Dependability and confidence in our end products
             </h1>

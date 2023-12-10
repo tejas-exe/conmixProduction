@@ -5,18 +5,18 @@ import "../../style.css";
 import CustomizedAccordions from "./accordian";
 export function AboutUs() {
   const textStyle = {
-    color: "#444", // Dark gray color for the entire text
-    fontFamily: "Arial", // Add your preferred font family
-    textAlign: "center", // Center-align the text
-    fontSize: "24px", // Adjust font size as needed
-    lineHeight: "1.5", // Adjust line height for better readability
+    color: "#000",
+    textAlign: "center",
+    fontSize: "24px",
+    lineHeight: "1.5",
   };
 
   const highlightStyle = {
+    paddingTop: "10px",
     color: "#ff4d4d", // Light red color for highlighted words
     fontWeight: "bold", // Make highlighted words bold
     fontStyle: "italic", // Make highlighted words italic
-    textDecoration: "underline", // Underline the highlighted words
+    // textDecoration: "underline", // Underline the highlighted words
   };
   return (
     <div>
@@ -29,7 +29,7 @@ export function AboutUs() {
       >
         <Grid xs={12} sm={12} lg={6}>
           <div className={s.about1}>
-            <span className={s.aboutBtn}>ABOUT CONMIX</span>
+            <span className={s.aboutBtn}>About Conmix</span>
             <h1 className={s.aboutUsHeading}> United For Excellence</h1>
             <p className={s.aboutUsPara}>
               CONMIX RMC (SOMNATH RMC & CEMENT PRODUCTS) company is a reputable
@@ -112,7 +112,8 @@ export function AboutUs() {
           >
             <span className={s.sliderBtn}>Conmix</span>
             <h2 style={textStyle}>
-              <span style={highlightStyle}> Punctuality</span> and
+              <span style={highlightStyle}> Punctuality</span>
+              {`  and `}
               <span style={highlightStyle}>quality</span> have entered a new
               age!
             </h2>

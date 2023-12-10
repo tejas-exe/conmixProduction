@@ -1,12 +1,15 @@
 import { Button, Grid, Paper, Typography } from "@mui/material";
-import React from "react";
+
 import { Formik, useFormikContext } from "formik";
 import * as Yup from "yup";
 import Form from "react-bootstrap/Form";
 import s from "./style.module.css";
 import emailjs from "emailjs-com";
+import React, { useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const Contacts = () => {
+  const [loading, setLoading] = useState(false);
   const validationSchema = Yup.object({
     Name: Yup.string().required("Required!"),
     phoneNumber: Yup.string().required("Required!"),
@@ -37,7 +40,7 @@ const Contacts = () => {
       >
         <Grid xs={12} sm={12} lg={12}>
           <div className={s.contact1}>
-            <span className={s.contactBtn}>CONATCT US</span>
+            <span className={s.contactBtn}>Contact us</span>
             <h1 className={s.getintouchTitle}>Get in Touch</h1>
 
             <Formik
@@ -54,6 +57,7 @@ const Contacts = () => {
               onSubmit={async (values, onSubmitProps) => {
                 console.log(values, onSubmitProps);
                 try {
+                  setLoading(true);
                   // Prevent the default form submission
 
                   // Access the form element
@@ -67,9 +71,11 @@ const Contacts = () => {
                   await emailjs.send(serviceID, templateID, values, userID);
 
                   console.log("Email sent successfully!");
+                  setLoading(false);
                   onSubmitProps.resetForm();
                 } catch (error) {
                   console.error("Email sending failed:", error);
+                  setLoading(false);
                 }
               }}
             >
@@ -155,11 +161,12 @@ const Contacts = () => {
                       placeholder="Write Message"
                       rows={4}
                       style={{ ...textfield, width: "99%" }}
-                    />
+                    />{" "}
                     <Button
                       type="submit"
                       onClick={formik.handleSubmit}
                       variant="contained"
+                      style={{ position: "relative" }}
                       sx={{
                         padding: "auto",
                         width: "99%",
@@ -168,7 +175,20 @@ const Contacts = () => {
                         marginBottom: "20px",
                       }}
                     >
-                      Submit
+                      {loading ? (
+                        <CircularProgress
+                          size={24}
+                          style={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            marginTop: -12,
+                            marginLeft: -12,
+                          }}
+                        />
+                      ) : (
+                        <>Submit</>
+                      )}
                     </Button>
                   </Grid>
                 );
@@ -179,7 +199,7 @@ const Contacts = () => {
       </Grid>
       <Grid container className={s.visitUsGrid} pb={4}>
         <div className={s.visitusinnerDiv}>
-          <div className={s.visitusHeader}>Visit Us, </div>
+          <div className={s.visitusHeader}>Visit us</div>
           <span>
             Embark on a journey with us! Visit us at our welcoming space, where
             you can explore curated type of business offerings. Our dedicated

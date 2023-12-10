@@ -212,14 +212,10 @@ export default function Products() {
                 className={s.productIMG}
                 style={{
                   height: "100%",
-                  maxWidth:
-                    "100%" /* Ensure the image doesn't exceed the container's width */,
-                  maxHeight:
-                    "100%" /* Ensure the image doesn't exceed the container's height */,
-                  display:
-                    "block" /* Remove any extra spacing or alignment issues */,
-                  margin:
-                    "0 auto" /* Center the image horizontally within the div */, // Set the width of the image to 100%
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  display: "block",
+                  margin: "0 auto",
                   borderRadius: "8px",
                 }}
               ></img>
@@ -286,7 +282,7 @@ export default function Products() {
             <img
               src={drawerDetails[detailIndex].image}
               alt=""
-              style={{ width: "100%", height: "300px", borderRadius: "8px" }}
+              style={{ height: "310px", borderRadius: "8px" }}
             />
             <h6
               style={{
