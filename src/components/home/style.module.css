@@ -47,8 +47,6 @@
   width: 500px;
 }
 
-
-
 /* Styles for screens up to 767px */
 @media (max-width: 767px) {
   .parent {
@@ -88,5 +86,16 @@
 @media (min-width: 500px) {
   .sliderHeading2 {
     width: 500px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sliderHeading2 {
+    font-size: 35px;
+    line-height: 0.9;
+  }
+  .sliderContent {
+    top: 340px;
+    width: 90%;
   }
 }

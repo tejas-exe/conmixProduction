@@ -169,15 +169,17 @@ export default function Products() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 0.25,
+          slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "9px",
         },
       },
       {
         breakpoint: 320,
         settings: {
-          slidesToShow: 0.25,
+          slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "5px",
         },
       },
     ],
@@ -282,7 +284,7 @@ export default function Products() {
             <img
               src={drawerDetails[detailIndex].image}
               alt=""
-              style={{ height: "310px", borderRadius: "8px" }}
+              style={{ width: "100%", height: "310px", borderRadius: "8px" }}
             />
             <h6
               style={{
