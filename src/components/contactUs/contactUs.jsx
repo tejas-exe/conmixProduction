@@ -173,6 +173,9 @@ const Contacts = () => {
                         height: "50px",
                         backgroundColor: "#c70039",
                         marginBottom: "20px",
+                        "&:hover": {
+                          backgroundColor: "#c70039",
+                        },
                       }}
                     >
                       {loading ? (
@@ -199,7 +202,7 @@ const Contacts = () => {
       </Grid>
       <Grid container className={s.visitUsGrid} pb={4}>
         <div className={s.visitusinnerDiv}>
-          <div className={s.visitusHeader}>Visit us</div>
+          <div className={s.visitusHeader}>Visit us,</div>
           <span>
             Embark on a journey with us! Visit us at our welcoming space, where
             you can explore curated type of business offerings. Our dedicated

@@ -26,11 +26,11 @@ const btnStyle = {
   alignItems: "center",
   cursor: "pointer",
   width: "80%",
-  color: "black",
+  color: "#c70039",
 };
 const selectedBtnStyle = {
   ...btnStyle,
-  backgroundColor: "darkgrey",
+  backgroundColor: "#fff5e0",
 };
 function SampleArrow(props) {
   const { className, style, onClick } = props;
@@ -121,7 +121,7 @@ export default function Products() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    dots: true,
+    dots: false,
     arrows: true,
     nextArrow: <SampleArrow />,
     prevArrow: <SampleArrow />,
@@ -141,7 +141,7 @@ export default function Products() {
           speed: 500,
           slidesToShow: 3,
           slidesToScroll: 1,
-          dots: true,
+          dots: false,
           arrows: true,
           nextArrow: <SampleArrow />,
           prevArrow: <SampleArrow />,
@@ -180,6 +180,7 @@ export default function Products() {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerPadding: "5px",
+          dots: false,
         },
       },
     ],
@@ -257,7 +258,7 @@ export default function Products() {
                 <FontAwesomeIcon
                   icon={icon}
                   size="2xl"
-                  style={{ marginBottom: "8px" }}
+                  style={{ marginBottom: "8px", color: "#000" }}
                 />
                 <h5 style={{ margin: "0" }}>{label}</h5>
               </Button>

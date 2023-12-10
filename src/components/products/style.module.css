@@ -37,9 +37,9 @@
 img.productIMG {
   border: red;
 }
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .productcontainer {
-    width: 500px; /* Set the desired width for the slide */
-    height: 500px; /* Add padding to create space around images */
+    width: 500px; 
+    height: 500px; 
   }
-}
+} */

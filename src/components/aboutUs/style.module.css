@@ -10,12 +10,14 @@
 }
 
 .aboutBtn {
-  background-color: #fff5e0;
+  text-align: center;
+  background-color: #c70039;
   width: 150px;
   font-weight: 700;
+  /* margin: auto; */
   border-radius: 20px;
   padding: 5px 10px;
-  color: #c70039;
+  color: #fff5e0;
 }
 
 .aboutUsHeading {
