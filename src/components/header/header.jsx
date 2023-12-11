@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AppBar,
+  IconButton,
   Stack,
   Toolbar,
   Typography,
@@ -10,9 +11,36 @@ import ContactMailIcon from "@mui/icons-material/ContactMail";
 import PhoneIcon from "@mui/icons-material/Phone";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import s from "./style.module.css";
 
 export function Header() {
+  const handleInstaIconClick = () => {
+    // Replace "/your-path" with the actual path you want to navigate to
+    const newWindow = window.open("https://www.instagram.com/conmix_rmc/", "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  };
+  const handleFBIconClick =()=>{
+    const newWindow = window.open("https://www.facebook.com/conmixrmc", "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  }
+  const handleUtubeIconClick =()=>{
+    const newWindow = window.open("https://www.youtube.com/@CONMIXRMC", "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  }
+  const handleTwitterIconClick =()=>{
+    const newWindow = window.open("https://twitter.com/ConmixRmc", "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  }
   return (
     <div className={s.resp}>
       <AppBar
@@ -24,7 +52,8 @@ export function Header() {
         }}
       >
         <Toolbar sx={{ mx: 9, my: -2 }}>
-          <Typography sx={{ flexGrow: 1, display: "flex", marginTop: 1 }}>
+
+          <Typography className={s.companyContact}sx={{ flexGrow: 1, display: "flex", marginTop: 1 }}>
             <Typography>
               <PhoneIcon />
             </Typography>
@@ -42,9 +71,19 @@ export function Header() {
               {details.email}
             </Typography>
           </Typography>
-          <Stack direction="row" spacing={2}>
-            <FacebookIcon fontSize="small" />
-            <InstagramIcon fontSize="small" />
+          <Stack direction="row" spacing={2} className={s.socials}>
+          <IconButton color="primary" onClick={handleFBIconClick}>
+            <FacebookIcon fontSize="small" style={{color:"#c70039"}} />
+          </IconButton>
+          <IconButton color="primary" onClick={handleInstaIconClick}>
+            <InstagramIcon fontSize="small" style={{color:"#c70039"}}/>
+            </IconButton>
+             <IconButton color="primary" onClick={handleUtubeIconClick}>
+             < YouTubeIcon  fontSize="small" style={{color:"#c70039"}} />
+             </IconButton>
+             <IconButton color="primary" onClick={handleTwitterIconClick}>
+             < TwitterIcon  fontSize="small" style={{color:"#c70039"}} />
+             </IconButton>
           </Stack>
         </Toolbar>
       </AppBar>

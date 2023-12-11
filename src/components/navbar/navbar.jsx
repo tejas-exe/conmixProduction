@@ -32,7 +32,12 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import { animateScroll as scroll } from "react-scroll";
+import { Stack } from "@mui/material";
 
 const pages = ["Home", "About Us", "Why Us", "Products", "Contact"];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -47,7 +52,31 @@ function Navbar() {
   // const handleOpenUserMenu = (event) => {
   //     setAnchorElUser(event.currentTarget);
   // };
-
+  const handleInstaIconClick = () => {
+    // Replace "/your-path" with the actual path you want to navigate to
+    const newWindow = window.open("https://www.instagram.com/conmix_rmc/", "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  };
+  const handleFBIconClick =()=>{
+    const newWindow = window.open("https://www.facebook.com/conmixrmc", "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  }
+  const handleUtubeIconClick =()=>{
+    const newWindow = window.open("https://www.youtube.com/@CONMIXRMC", "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  }
+  const handleTwitterIconClick =()=>{
+    const newWindow = window.open("https://twitter.com/ConmixRmc", "_blank");
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  }
   const handleCloseNavMenu = (event) => {
     setAnchorElNav(null);
     console.log("==>=>", event.target.id);
@@ -94,6 +123,11 @@ function Navbar() {
     <AppBar position="static" sx={{ backgroundColor: "white", color: "black" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+        <img
+              src="https://drive.google.com/uc?id=15XnH83PP4JrNnXqCf-A30oq1nYgkpkWy"
+              alt="LOGO"
+              style={{ width: "50px"}}
+            />
           <Typography
             variant="h6"
             noWrap
@@ -151,9 +185,25 @@ function Navbar() {
                   >
                     {page}
                   </Typography>
+                 
                 </MenuItem>
               ))}
+              <Stack direction="row" spacing={1} p={1}>
+          <IconButton color="primary" onClick={handleFBIconClick}>
+            <FacebookIcon fontSize="small" style={{color:"#c70039"}} />
+          </IconButton>
+          <IconButton color="primary" onClick={handleInstaIconClick}>
+            <InstagramIcon fontSize="small" style={{color:"#c70039"}}/>
+            </IconButton>
+             <IconButton color="primary" onClick={handleUtubeIconClick}>
+             < YouTubeIcon  fontSize="small" style={{color:"#c70039"}} />
+             </IconButton>
+             <IconButton color="primary" onClick={handleTwitterIconClick}>
+             < TwitterIcon  fontSize="small" style={{color:"#c70039"}} />
+             </IconButton>
+          </Stack>
             </Menu>
+            
           </Box>
 
           <Typography
@@ -172,11 +222,11 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            <img
+            {/* <img
               src="https://drive.google.com/uc?id=15XnH83PP4JrNnXqCf-A30oq1nYgkpkWy"
               alt="LOGO"
               style={{ width: "50px"}}
-            />
+            /> */}
           </Typography>
           <Box
             sx={{

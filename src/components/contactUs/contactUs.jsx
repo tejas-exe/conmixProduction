@@ -63,9 +63,15 @@ const Contacts = () => {
                   // Access the form element
 
                   // Your emailjs logic using sendForm
-                  const serviceID = "service_vyr0aqd";
-                  const templateID = "template_lxqfxgb";
-                  const userID = "pBCrn4iPuccR7_7ZN";
+                  //developers details
+                  // const serviceID = "service_vyr0aqd";
+                  // const templateID = "template_lxqfxgb";
+                  // const userID = "pBCrn4iPuccR7_7ZN";
+
+                 //client details
+                  const serviceID = 'service_7gxeink';
+                  const templateID = 'template_hegzqlm';
+                  const userID = 'GmtaH6uTPELhi-4y5';
 
                   // You can use 'values' directly instead of 'event.target'
                   await emailjs.send(serviceID, templateID, values, userID);
@@ -255,7 +261,7 @@ const Contacts = () => {
             <Grid container sx={{ height: "100%" }}>
               <Grid item xs={12} sm={12} lg={9}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.508317843421!2d72.88714477438897!3d21.0922912855951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051403acad945%3A0xb976b1fb1bb3d61d!2sKrishna%20Concrete!5e0!3m2!1sen!2sin!4v1699354432361!5m2!1sen!2sin"
+                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3722.5225642849246!2d72.88492227525836!3d21.091722780573374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDA1JzMwLjIiTiA3MsKwNTMnMTUuMCJF!5e0!3m2!1sen!2sin!4v1702286284728!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: "2px solid #CCCCCC" }}
@@ -275,10 +281,10 @@ const Contacts = () => {
                 }}
               >
                 <Typography variant="h6" className={s.mapTitle}>
-                  Krishna Concrete
+                Conmix: Somnath Rmc & Cement Products(Plant-2)
                 </Typography>
                 <Typography variant="body" style={{ textAlign: "center" }}>
-                  Songadh - Surat, Vanz, Sachin,
+                Pardi Kande, Sachin,
                   <br /> Surat, Gujarat 394235
                 </Typography>
               </Grid>

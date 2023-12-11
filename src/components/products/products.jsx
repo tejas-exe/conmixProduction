@@ -292,6 +292,8 @@ export default function Products() {
                 marginTop: "10px",
                 marginBottom: "5px",
                 fontSize: "1.2em",
+                color:"#c70039",
+                fontWeight:"bold"
               }}
             >
               {drawerDetails[detailIndex].title}

@@ -5,7 +5,7 @@ const CopyrightBar = () => {
   return (
     <footer className={s.copyright}>
       <div className={s.container}>
-        <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+        <p>copyright@{new Date().getFullYear()}|Conmix Somnath RMC|developed by Tejas Kumarley  & Mayuri Soni . All rights reserved.</p>
       </div>
     </footer>
   );

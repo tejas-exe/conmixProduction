@@ -13,7 +13,7 @@ export function AboutUs() {
 
   const highlightStyle = {
     paddingTop: "10px",
-    color: "#ff4d4d", // Light red color for highlighted words
+    color: "#c70039", // Light red color for highlighted words
     fontWeight: "bold", // Make highlighted words bold
     fontStyle: "italic", // Make highlighted words italic
     // textDecoration: "underline", // Underline the highlighted words

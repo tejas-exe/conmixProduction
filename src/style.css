@@ -74,10 +74,17 @@
     margin: 100px;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   .image {
     width: 525px;
-    height: 400px;
+    height: 300px;
+    margin: 100px;
+  }
+}
+@media screen and (min-width: 1040px) and (max-width: 1717px) {
+  .image {
+    width: 400px;
+    height: 300px;
     margin: 100px;
   }
 }
