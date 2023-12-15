@@ -34,8 +34,8 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import { animateScroll as scroll } from "react-scroll";
 import { Stack } from "@mui/material";
 
@@ -54,29 +54,38 @@ function Navbar() {
   // };
   const handleInstaIconClick = () => {
     // Replace "/your-path" with the actual path you want to navigate to
-    const newWindow = window.open("https://www.instagram.com/conmix_rmc/", "_blank");
+    const newWindow = window.open(
+      "https://www.instagram.com/conmix_rmc/",
+      "_blank"
+    );
     if (newWindow) {
       newWindow.opener = null;
     }
   };
-  const handleFBIconClick =()=>{
-    const newWindow = window.open("https://www.facebook.com/conmixrmc", "_blank");
+  const handleFBIconClick = () => {
+    const newWindow = window.open(
+      "https://www.facebook.com/conmixrmc",
+      "_blank"
+    );
     if (newWindow) {
       newWindow.opener = null;
     }
-  }
-  const handleUtubeIconClick =()=>{
-    const newWindow = window.open("https://www.youtube.com/@CONMIXRMC", "_blank");
+  };
+  const handleUtubeIconClick = () => {
+    const newWindow = window.open(
+      "https://www.youtube.com/@CONMIXRMC",
+      "_blank"
+    );
     if (newWindow) {
       newWindow.opener = null;
     }
-  }
-  const handleTwitterIconClick =()=>{
+  };
+  const handleTwitterIconClick = () => {
     const newWindow = window.open("https://twitter.com/ConmixRmc", "_blank");
     if (newWindow) {
       newWindow.opener = null;
     }
-  }
+  };
   const handleCloseNavMenu = (event) => {
     setAnchorElNav(null);
     console.log("==>=>", event.target.id);
@@ -88,29 +97,29 @@ function Navbar() {
       scroll.scrollTo(700);
     }
     if (event.target.id === "Why Us") {
-      scroll.scrollTo(1350);
+      scroll.scrollTo(1550);
     }
     if (event.target.id === "Products") {
-      scroll.scrollTo(1700);
+      scroll.scrollTo(2600);
     }
     if (event.target.id === "Contact") {
-      scroll.scrollTo(3000);
+      scroll.scrollTo(4440);
     }
 
     if (event.target.id === "Home m") {
       scroll.scrollTo(100);
     }
     if (event.target.id === "About Us m") {
-      scroll.scrollTo(650);
+      scroll.scrollTo(677);
     }
     if (event.target.id === "Why Us m") {
-      scroll.scrollTo(2000);
+      scroll.scrollTo(1690);
     }
     if (event.target.id == "Products m") {
-      scroll.scrollTo(2800);
+      scroll.scrollTo(3790);
     }
     if (event.target.id == "Contact m") {
-      scroll.scrollTo(4500);
+      scroll.scrollTo(8300);
     }
   };
 
@@ -123,11 +132,11 @@ function Navbar() {
     <AppBar position="static" sx={{ backgroundColor: "white", color: "black" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <img
-              src="https://drive.google.com/uc?id=15XnH83PP4JrNnXqCf-A30oq1nYgkpkWy"
-              alt="LOGO"
-              style={{ width: "50px"}}
-            />
+          <img
+            src="https://drive.google.com/uc?id=15XnH83PP4JrNnXqCf-A30oq1nYgkpkWy"
+            alt="LOGO"
+            style={{ width: "50px" }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -185,25 +194,26 @@ function Navbar() {
                   >
                     {page}
                   </Typography>
-                 
                 </MenuItem>
               ))}
               <Stack direction="row" spacing={1} p={1}>
-          <IconButton color="primary" onClick={handleFBIconClick}>
-            <FacebookIcon fontSize="small" style={{color:"#c70039"}} />
-          </IconButton>
-          <IconButton color="primary" onClick={handleInstaIconClick}>
-            <InstagramIcon fontSize="small" style={{color:"#c70039"}}/>
-            </IconButton>
-             <IconButton color="primary" onClick={handleUtubeIconClick}>
-             < YouTubeIcon  fontSize="small" style={{color:"#c70039"}} />
-             </IconButton>
-             <IconButton color="primary" onClick={handleTwitterIconClick}>
-             < TwitterIcon  fontSize="small" style={{color:"#c70039"}} />
-             </IconButton>
-          </Stack>
+                <IconButton color="primary" onClick={handleFBIconClick}>
+                  <FacebookIcon fontSize="small" style={{ color: "#c70039" }} />
+                </IconButton>
+                <IconButton color="primary" onClick={handleInstaIconClick}>
+                  <InstagramIcon
+                    fontSize="small"
+                    style={{ color: "#c70039" }}
+                  />
+                </IconButton>
+                <IconButton color="primary" onClick={handleUtubeIconClick}>
+                  <YouTubeIcon fontSize="small" style={{ color: "#c70039" }} />
+                </IconButton>
+                <IconButton color="primary" onClick={handleTwitterIconClick}>
+                  <TwitterIcon fontSize="small" style={{ color: "#c70039" }} />
+                </IconButton>
+              </Stack>
             </Menu>
-            
           </Box>
 
           <Typography

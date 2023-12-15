@@ -283,17 +283,18 @@ export default function Products() {
             }}
           >
             <img
+              className={s.functionImage}
               src={drawerDetails[detailIndex].image}
               alt=""
-              style={{ width: "100%", height: "310px", borderRadius: "8px" }}
+              // style={{}}
             />
             <h6
               style={{
                 marginTop: "10px",
                 marginBottom: "5px",
                 fontSize: "1.2em",
-                color:"#c70039",
-                fontWeight:"bold"
+                color: "#c70039",
+                fontWeight: "bold",
               }}
             >
               {drawerDetails[detailIndex].title}
