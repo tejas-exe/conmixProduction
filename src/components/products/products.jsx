@@ -1,5 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
+import img1 from "../../assets/manufacturing.jpg";
+import img2 from "../../assets/technology.jpg";
+
+import img3 from "../../assets/jpeg-optimizer_top notch quality.jpg";
+import img4 from "../../assets/jpeg-optimizer_supplier.jpg";
+import img5 from "../../assets/outsource.jpg";
+import img6 from "../../assets/jpeg-optimizer_area of product applications.jpg";
+
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import { Button, Grid } from "@mui/material";
@@ -69,48 +77,42 @@ export default function Products() {
       title: "Manufacturing",
       details:
         "Embark on a journey through the heart of ConMix's manufacturing excellence. Our state-of-the-art facilities blend precision and innovation to create ready-mix concrete that sets the standard for quality in the construction industry. Explore the meticulous process that brings your projects to life.",
-      image:
-        "https://drive.google.com/uc?export=view&id=1KAGT1QwkqThZ9AQBHurRd477vFvuUaad",
+      image: img1,
     },
     {
       id: "2",
       title: "Technology",
       details:
         "At ConMix, we embrace the forefront of technology to redefine concrete solutions. Dive into a world where cutting-edge innovations and advanced techniques merge, ensuring that every batch of our ready-mix concrete meets and exceeds the demands of modern construction",
-      image:
-        "https://drive.google.com/uc?export=view&id=1xgZagB0R2nMuFnmiZhJRuuzTbs_4zHs2",
+      image: img2,
     },
     {
       id: "3",
       title: "Top Notch Quality",
       details:
         "Quality is not just a promise; it's a commitment etched in every cubic meter of ConMix concrete. Learn about our stringent quality control measures that guarantee top-notch durability and reliability. Elevate your projects with concrete that stands the test of time.",
-      image:
-        "https://drive.google.com/uc?export=view&id=1BDMWBTr0mDihnmlOHS_haEbkNNwxkUSw",
+      image: img3,
     },
     {
       id: "4",
       title: "Supplier",
       details:
         "Trust ConMix as your reliable partner in construction. As your dedicated supplier, we ensure a seamless and consistent source of ready-mix concrete for your projects. Experience the ConMix advantage—timely deliveries and unwavering quality that fuels your success.",
-      image:
-        "https://drive.google.com/uc?export=view&id=1cIQAApwjhGF9XtQU02FNfsU2iUpVmJ4_",
+      image: img4,
     },
     {
       id: "5",
       title: "Outsource Work",
       details:
         "Simplify your construction processes by entrusting ConMix with your concrete needs. Outsource the intricacies of concrete production and delivery to us, allowing you to focus on your core competencies. Discover how ConMix streamlines your construction journey with efficiency and cost-effectiveness.",
-      image:
-        "https://drive.google.com/uc?export=view&id=12HoLQNs81WvFVtSbDvFDFptL6MGC87Ae",
+      image: img5,
     },
     {
       id: "6",
       title: "Area of Product Application",
       details:
         "Explore the diverse applications of ConMix ready-mix concrete across a spectrum of construction projects. From residential builds to large-scale infrastructure, witness how our concrete seamlessly integrates, providing strength and reliability to every corner of your project. Your vision, our concrete",
-      image:
-        "https://drive.google.com/uc?export=view&id=1Fz7eD2I5oPFJXyZRCUowMGD4JICBCh6g",
+      image: img6,
     },
   ];
   var settings = {
@@ -286,6 +288,7 @@ export default function Products() {
               className={s.functionImage}
               src={drawerDetails[detailIndex].image}
               alt=""
+              loading="lazy"
               // style={{}}
             />
             <h6
