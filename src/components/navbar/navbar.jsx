@@ -113,13 +113,13 @@ function Navbar() {
       scroll.scrollTo(677);
     }
     if (event.target.id === "Why Us m") {
-      scroll.scrollTo(1690);
+      scroll.scrollTo(1800);
     }
     if (event.target.id == "Products m") {
-      scroll.scrollTo(3790);
+      scroll.scrollTo(4000);
     }
     if (event.target.id == "Contact m") {
-      scroll.scrollTo(8300);
+      scroll.scrollTo(9100);
     }
   };
 
