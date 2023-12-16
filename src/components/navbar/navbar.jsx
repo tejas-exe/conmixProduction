@@ -42,7 +42,7 @@ import { Stack } from "@mui/material";
 const pages = ["Home", "About Us", "Why Us", "Products", "Contact"];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function Navbar() {
+function Navbar({ scrollToElement }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -90,37 +90,7 @@ function Navbar() {
     setAnchorElNav(null);
     console.log("==>=>", event.target.id);
 
-    if (event.target.id === "Home") {
-      scroll.scrollTo(100);
-    }
-    if (event.target.id === "About Us") {
-      scroll.scrollTo(700);
-    }
-    if (event.target.id === "Why Us") {
-      scroll.scrollTo(1550);
-    }
-    if (event.target.id === "Products") {
-      scroll.scrollTo(2600);
-    }
-    if (event.target.id === "Contact") {
-      scroll.scrollTo(4440);
-    }
-
-    if (event.target.id === "Home m") {
-      scroll.scrollTo(100);
-    }
-    if (event.target.id === "About Us m") {
-      scroll.scrollTo(677);
-    }
-    if (event.target.id === "Why Us m") {
-      scroll.scrollTo(1800);
-    }
-    if (event.target.id == "Products m") {
-      scroll.scrollTo(4000);
-    }
-    if (event.target.id == "Contact m") {
-      scroll.scrollTo(9100);
-    }
+    scrollToElement(event.target.id);
   };
 
   const handleCloseUserMenu = (event) => {
@@ -190,7 +160,7 @@ function Navbar() {
                   <Typography
                     sx={{ fontWeight: 800 }}
                     textAlign="center"
-                    id={page + " m"}
+                    id={page}
                   >
                     {page}
                   </Typography>

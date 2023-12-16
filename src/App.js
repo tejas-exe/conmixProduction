@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link, Element, scroller } from "react-scroll";
 import { AboutUs } from "./components/aboutUs/aboutUs";
 import { Header } from "./components/header/header";
 import { Home } from "./components/home/home";
@@ -11,52 +12,38 @@ import WhyUs from "./components/whyus/whyus";
 import Services from "./components/serviceProjects/services";
 
 function App() {
+  const scrollToElement = (element) => {
+    console.log("--------->", element);
+    scroller.scrollTo(element, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+  const pages = ["Home", "About Us", "Why Us", "Products", "Contact"];
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Conmix RMC - Ready Mix Concrete</title>
-        <meta
-          name="description"
-          content="Provide high-quality ready mix concrete to clients."
-        />
-
-        {/* OpenGraph tags for social media */}
-        <meta property="og:title" content="Conmix RMC - Ready Mix Concrete" />
-        <meta
-          property="og:description"
-          content="Provide high-quality ready mix concrete to clients."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="URL_TO_YOUR_SOCIAL_MEDIA_IMAGE" />
-        <meta property="og:url" content="URL_TO_YOUR_WEBSITE" />
-
-        {/* Twitter card tags for social media */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Conmix RMC - Ready Mix Concrete" />
-        <meta
-          name="twitter:description"
-          content="Provide high-quality ready mix concrete to clients."
-        />
-        <meta name="twitter:image" content="URL_TO_YOUR_SOCIAL_MEDIA_IMAGE" />
-
-        {/* Viewport settings */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/* Favicon */}
-        <link rel="icon" type="image/png" href="URL_TO_YOUR_FAVICON" />
-
-        {/* Other meta tags as needed */}
-      </Helmet>
-
+      {/* helmet */}
       <Header />
-      <Navbar />
-      <Home />
-      <AboutUs />
-      <WhyUs />
-      <Products />
-      <Services />
-      <Contacts />
+      <Navbar scrollToElement={scrollToElement} />
+      <Element name="Home">
+        <Home />
+      </Element>
+      <Element name="About Us">
+        <AboutUs />
+      </Element>
+      <Element name="Why Us">
+        <WhyUs />
+      </Element>
+      <Element name="Products">
+        <Products />
+      </Element>
+      <Element name="services">
+        <Services />
+      </Element>
+      <Element name="Contact">
+        <Contacts />
+      </Element>
       <Footer />
     </>
   );
