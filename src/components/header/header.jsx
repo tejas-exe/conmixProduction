@@ -1,9 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { AppBar, IconButton, Stack, Toolbar, Typography } from "@mui/material";
-import details from "../../assets/video/conmixDetails";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
-import PhoneIcon from "@mui/icons-material/Phone";
+import { AppBar, IconButton, Stack, Toolbar} from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -67,7 +64,7 @@ export function Header() {
           }}
         >
           <Toolbar sx={{ mx: 9, my: -2 }}>
-            <Typography
+            {/* <Typography
               className={s.companyContact}
               sx={{ flexGrow: 1, display: "flex", marginTop: 1 }}
             >
@@ -87,7 +84,7 @@ export function Header() {
               <Typography variant="body1" sx={{ fontWeight: 500 }}>
                 {details.email}
               </Typography>
-            </Typography>
+            </Typography> */}
             <Stack direction="row" spacing={2} className={s.socials}>
               <IconButton color="primary" onClick={handleFBIconClick}>
                 <FacebookIcon fontSize="small" style={{ color: "#c70039" }} />

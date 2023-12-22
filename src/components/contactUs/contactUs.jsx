@@ -1,6 +1,7 @@
 import { Button, Grid, Paper, Typography } from "@mui/material";
 
 import { Formik, useFormikContext } from "formik";
+import PhoneIcon from "@mui/icons-material/Phone";
 import * as Yup from "yup";
 import Form from "react-bootstrap/Form";
 import s from "./style.module.css";
@@ -42,6 +43,31 @@ const Contacts = () => {
           <div className={s.contact1}>
             <span className={s.contactBtn}>Contact us</span>
             <h1 className={s.getintouchTitle}>Get in Touch</h1>
+            <div className={s.gridDiv}>
+              <div className={s.contactBtnNo}>
+                <span>Mahendra: </span>
+                <span style={{ color: "#c70039", fontWeight: "700" }}>
+                  <PhoneIcon fontSize="small" />
+                  9824881990
+                </span>
+              </div>
+
+              <div className={s.contactBtnNo}>
+                <span>Dhaval: </span>
+                <span style={{ color: "#c70039", fontWeight: "700" }}>
+                  <PhoneIcon fontSize="small" />
+                  9979869771
+                </span>
+              </div>
+
+              <div className={s.contactBtnNo}>
+                <span>Praful: </span>
+                <span style={{ color: "#c70039", fontWeight: "700" }}>
+                  <PhoneIcon fontSize="small" />
+                  9825111281
+                </span>
+              </div>
+            </div>
 
             <Formik
               initialValues={{
@@ -68,10 +94,10 @@ const Contacts = () => {
                   // const templateID = "template_lxqfxgb";
                   // const userID = "pBCrn4iPuccR7_7ZN";
 
-                 //client details
-                  const serviceID = 'service_7gxeink';
-                  const templateID = 'template_hegzqlm';
-                  const userID = 'GmtaH6uTPELhi-4y5';
+                  //client details
+                  const serviceID = "service_7gxeink";
+                  const templateID = "template_hegzqlm";
+                  const userID = "GmtaH6uTPELhi-4y5";
 
                   // You can use 'values' directly instead of 'event.target'
                   await emailjs.send(serviceID, templateID, values, userID);
@@ -261,7 +287,7 @@ const Contacts = () => {
             <Grid container sx={{ height: "100%" }}>
               <Grid item xs={12} sm={12} lg={9}>
                 <iframe
-                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3722.5225642849246!2d72.88492227525836!3d21.091722780573374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDA1JzMwLjIiTiA3MsKwNTMnMTUuMCJF!5e0!3m2!1sen!2sin!4v1702286284728!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3722.5225642849246!2d72.88492227525836!3d21.091722780573374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDA1JzMwLjIiTiA3MsKwNTMnMTUuMCJF!5e0!3m2!1sen!2sin!4v1702286284728!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: "2px solid #CCCCCC" }}
@@ -281,10 +307,10 @@ const Contacts = () => {
                 }}
               >
                 <Typography variant="h6" className={s.mapTitle}>
-                Conmix: Somnath Rmc & Cement Products(Plant-2)
+                  Conmix: Somnath Rmc & Cement Products(Plant-2)
                 </Typography>
                 <Typography variant="body" style={{ textAlign: "center" }}>
-                Pardi Kande, Sachin,
+                  Pardi Kande, Sachin,
                   <br /> Surat, Gujarat 394235
                 </Typography>
               </Grid>

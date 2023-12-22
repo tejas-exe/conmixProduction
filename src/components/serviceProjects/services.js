@@ -173,7 +173,7 @@ const Services = () => {
                 alt="Image Description"
               />
               <Typography variant="h6">{obj.ourcustomerTitle}</Typography>
-              <Typography variant="body2">{obj.desc}</Typography>
+       
             </Grid>
           ))}
         </Grid>

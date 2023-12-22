@@ -3,6 +3,5 @@ const details = {
   email: "somnathrmc.conmix@gmail.com",
   fbLink: "https://www.facebook.com/conmixrmc",
   instaLink: "https://www.instagram.com/conmix_rmc/",
-  
 };
 export default details;
