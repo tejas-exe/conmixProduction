@@ -1,7 +1,8 @@
 import { Button, Grid, Paper, Typography } from "@mui/material";
 
-import { Formik, useFormikContext } from "formik";
+import { Formik } from "formik";
 import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
 import * as Yup from "yup";
 import Form from "react-bootstrap/Form";
 import s from "./style.module.css";
@@ -41,194 +42,246 @@ const Contacts = () => {
       >
         <Grid xs={12} sm={12} lg={12}>
           <div className={s.contact1}>
-            <span className={s.contactBtn}>Contact us</span>
-            <h1 className={s.getintouchTitle}>Get in Touch</h1>
-            <div className={s.gridDiv}>
-              <div className={s.contactBtnNo}>
-                <span>Mahendra: </span>
-                <span style={{ color: "#c70039", fontWeight: "700" }}>
-                  <PhoneIcon fontSize="small" />
-                  9824881990
-                </span>
+            <span
+              className={s.contactBtn}
+              style={{ margin: "50px 13% auto 18%" }}
+            >
+              Contact us
+            </span>
+            <h1
+              className={s.getintouchTitle}
+              style={{ margin: "50px 13% auto 18%" }}
+            >
+              Get in Touch
+            </h1>
+            <div
+              style={{
+                backgroundColor: "#fff5e0",
+                width: "80%",
+                maxWidth: "400px",
+                marginLeft: "50px",
+                padding: "20px",
+                borderRadius: "20px",
+                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)",
+                margin: "50px 13% auto 18%",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  color: "#c70039",
+                  marginBottom: "20px",
+                  textTransform: "uppercase",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
+                }}
+              >
+                Conmix
               </div>
-
-              <div className={s.contactBtnNo}>
-                <span>Dhaval: </span>
-                <span style={{ color: "#c70039", fontWeight: "700" }}>
-                  <PhoneIcon fontSize="small" />
-                  9979869771
-                </span>
+              <div
+                style={{
+                  marginBottom: "15px",
+                  textAlign: "center",
+                  color: "#555",
+                  fontSize: "13px",
+                }}
+              >
+                <EmailIcon
+                  fontSize="small"
+                  style={{ color: "#c70039", marginRight: "10px" }}
+                />
+                somnathrmc.conmix@gmail.com
               </div>
-
-              <div className={s.contactBtnNo}>
-                <span>Praful: </span>
-                <span style={{ color: "#c70039", fontWeight: "700" }}>
-                  <PhoneIcon fontSize="small" />
-                  9825111281
-                </span>
+              <div style={{ textAlign: "center", fontSize: "13px" }}>
+                <div style={{ marginBottom: "12px", color: "#555" }}>
+                  <PhoneIcon
+                    fontSize="small"
+                    style={{ color: "#c70039", marginRight: "10px" }}
+                  />
+                  +91 9824 881 990
+                </div>
+                <div style={{ marginBottom: "12px", color: "#555" }}>
+                  <PhoneIcon
+                    fontSize="small"
+                    style={{ color: "#c70039", marginRight: "10px" }}
+                  />
+                  +91 9979 869 771
+                </div>
+                <div style={{ color: "#555" }}>
+                  <PhoneIcon
+                    fontSize="small"
+                    style={{ color: "#c70039", marginRight: "10px" }}
+                  />
+                  +91 9825 111 281
+                </div>
               </div>
             </div>
 
-            <Formik
-              initialValues={{
-                Name: "",
-                email: "",
-                phoneNumber: "",
-                quantityApprox: "",
-                grade: "",
-                pumpRequired: "",
-                message: "",
-              }}
-              validationSchema={validationSchema}
-              onSubmit={async (values, onSubmitProps) => {
-                console.log(values, onSubmitProps);
-                try {
-                  setLoading(true);
-                  // Prevent the default form submission
+            <div style={{ margin: "50px 13% auto 18%" }}>
+              <Formik
+                // style={{ margin: "50px 13% auto 18%" }}
+                initialValues={{
+                  Name: "",
+                  email: "",
+                  phoneNumber: "",
+                  quantityApprox: "",
+                  grade: "",
+                  pumpRequired: "",
+                  message: "",
+                }}
+                validationSchema={validationSchema}
+                onSubmit={async (values, onSubmitProps) => {
+                  console.log(values, onSubmitProps);
+                  try {
+                    setLoading(true);
+                    // Prevent the default form submission
 
-                  // Access the form element
+                    // Access the form element
 
-                  // Your emailjs logic using sendForm
-                  //developers details
-                  // const serviceID = "service_vyr0aqd";
-                  // const templateID = "template_lxqfxgb";
-                  // const userID = "pBCrn4iPuccR7_7ZN";
+                    // Your emailjs logic using sendForm
+                    //developers details
+                    // const serviceID = "service_vyr0aqd";
+                    // const templateID = "template_lxqfxgb";
+                    // const userID = "pBCrn4iPuccR7_7ZN";
 
-                  //client details
-                  const serviceID = "service_7gxeink";
-                  const templateID = "template_hegzqlm";
-                  const userID = "GmtaH6uTPELhi-4y5";
+                    //client details
+                    const serviceID = "service_7gxeink";
+                    const templateID = "template_hegzqlm";
+                    const userID = "GmtaH6uTPELhi-4y5";
 
-                  // You can use 'values' directly instead of 'event.target'
-                  await emailjs.send(serviceID, templateID, values, userID);
+                    // You can use 'values' directly instead of 'event.target'
+                    await emailjs.send(serviceID, templateID, values, userID);
 
-                  console.log("Email sent successfully!");
-                  setLoading(false);
-                  onSubmitProps.resetForm();
-                } catch (error) {
-                  console.error("Email sending failed:", error);
-                  setLoading(false);
-                }
-              }}
-            >
-              {(formik) => {
-                return (
-                  <Grid container>
-                    <Grid xs={12} sm={6} lg={6}>
-                      <Form.Control
-                        type="text"
-                        name="Name"
-                        value={formik.values.Name}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        placeholder="Your Name"
-                        style={{ ...textfield }}
-                      />
-                      <Form.Control
-                        type="number"
-                        name="phoneNumber"
-                        value={formik.values.phoneNumber}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        placeholder="Phone Number"
-                        style={textfield}
-                      />
-                      <Form.Select
-                        aria-label="Grade"
-                        name="grade"
-                        value={formik.values.grade}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        style={{ ...textfield, color: "#6c757d" }}
-                      >
-                        <option>Grade</option>
-                        <option value="Grade 10">Grade 10</option>
-                        <option value="Grade 15">Grade 15</option>
-                        <option value="Grade 20">Grade 20</option>
-                        <option value="Grade 25">Grade 25</option>
-                        <option value="Grade 30">Grade 30</option>
-                        <option value="Grade 35">Grade 35</option>
-                        <option value="Grade 40">Grade 40</option>
-                        <option value="All">All</option>
-                      </Form.Select>
-                    </Grid>
-                    <Grid xs={12} sm={6} lg={6}>
-                      <Form.Control
-                        type="email"
-                        name="email"
-                        value={formik.values.email}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        placeholder="Email Address"
-                        style={textfield}
-                      />
-                      <Form.Control
-                        type="text"
-                        name="quantityApprox"
-                        value={formik.values.quantityApprox}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        placeholder="Quantity Approx"
-                        style={textfield}
-                      />
-                      <Form.Select
-                        aria-label="Pump Required"
-                        name="pumpRequired"
-                        value={formik.values.pumpRequired}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        style={{ ...textfield, color: "#6c757d" }}
-                      >
-                        <option>Pump Required</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                      </Form.Select>
-                    </Grid>
-                    <Form.Control
-                      as="textarea"
-                      name="message"
-                      value={formik.values.message}
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      placeholder="Write Message"
-                      rows={4}
-                      style={{ ...textfield, width: "99%" }}
-                    />{" "}
-                    <Button
-                      type="submit"
-                      onClick={formik.handleSubmit}
-                      variant="contained"
-                      style={{ position: "relative" }}
-                      sx={{
-                        padding: "auto",
-                        width: "99%",
-                        height: "50px",
-                        backgroundColor: "#c70039",
-                        marginBottom: "20px",
-                        "&:hover": {
-                          backgroundColor: "#c70039",
-                        },
-                      }}
-                    >
-                      {loading ? (
-                        <CircularProgress
-                          size={24}
-                          style={{
-                            position: "absolute",
-                            top: "50%",
-                            left: "50%",
-                            marginTop: -12,
-                            marginLeft: -12,
-                          }}
+                    console.log("Email sent successfully!");
+                    setLoading(false);
+                    onSubmitProps.resetForm();
+                  } catch (error) {
+                    console.error("Email sending failed:", error);
+                    setLoading(false);
+                  }
+                }}
+              >
+                {(formik) => {
+                  return (
+                    <Grid container>
+                      <Grid xs={12} sm={6} lg={6}>
+                        <Form.Control
+                          type="text"
+                          name="Name"
+                          value={formik.values.Name}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          placeholder="Your Name"
+                          style={{ ...textfield }}
                         />
-                      ) : (
-                        <>Submit</>
-                      )}
-                    </Button>
-                  </Grid>
-                );
-              }}
-            </Formik>
+                        <Form.Control
+                          type="number"
+                          name="phoneNumber"
+                          value={formik.values.phoneNumber}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          placeholder="Phone Number"
+                          style={textfield}
+                        />
+                        <Form.Select
+                          aria-label="Grade"
+                          name="grade"
+                          value={formik.values.grade}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          style={{ ...textfield, color: "#6c757d" }}
+                        >
+                          <option>Grade</option>
+                          <option value="Grade 10">Grade 10</option>
+                          <option value="Grade 15">Grade 15</option>
+                          <option value="Grade 20">Grade 20</option>
+                          <option value="Grade 25">Grade 25</option>
+                          <option value="Grade 30">Grade 30</option>
+                          <option value="Grade 35">Grade 35</option>
+                          <option value="Grade 40">Grade 40</option>
+                          <option value="All">All</option>
+                        </Form.Select>
+                      </Grid>
+                      <Grid xs={12} sm={6} lg={6}>
+                        <Form.Control
+                          type="email"
+                          name="email"
+                          value={formik.values.email}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          placeholder="Email Address"
+                          style={textfield}
+                        />
+                        <Form.Control
+                          type="text"
+                          name="quantityApprox"
+                          value={formik.values.quantityApprox}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          placeholder="Quantity Approx"
+                          style={textfield}
+                        />
+                        <Form.Select
+                          aria-label="Pump Required"
+                          name="pumpRequired"
+                          value={formik.values.pumpRequired}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          style={{ ...textfield, color: "#6c757d" }}
+                        >
+                          <option>Pump Required</option>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
+                        </Form.Select>
+                      </Grid>
+                      <Form.Control
+                        as="textarea"
+                        name="message"
+                        value={formik.values.message}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        placeholder="Write Message"
+                        rows={4}
+                        style={{ ...textfield, width: "99%" }}
+                      />{" "}
+                      <Button
+                        type="submit"
+                        onClick={formik.handleSubmit}
+                        variant="contained"
+                        style={{ position: "relative" }}
+                        sx={{
+                          padding: "auto",
+                          width: "99%",
+                          height: "50px",
+                          backgroundColor: "#c70039",
+                          marginBottom: "20px",
+                          "&:hover": {
+                            backgroundColor: "#c70039",
+                          },
+                        }}
+                      >
+                        {loading ? (
+                          <CircularProgress
+                            size={24}
+                            style={{
+                              position: "absolute",
+                              top: "50%",
+                              left: "50%",
+                              marginTop: -12,
+                              marginLeft: -12,
+                            }}
+                          />
+                        ) : (
+                          <>Submit</>
+                        )}
+                      </Button>
+                    </Grid>
+                  );
+                }}
+              </Formik>
+            </div>
           </div>
         </Grid>
       </Grid>

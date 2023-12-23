@@ -8,10 +8,8 @@
 .contact1 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-
-  margin: 50px 13% auto 18%;
-  padding: 0px 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .contactBtn {
