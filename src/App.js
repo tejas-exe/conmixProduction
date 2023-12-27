@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Link, Element, scroller } from "react-scroll";
+import { Element, scroller } from "react-scroll";
 import { AboutUs } from "./components/aboutUs/aboutUs";
 import { Header } from "./components/header/header";
 import { Home } from "./components/home/home";
@@ -27,6 +27,10 @@ function App() {
         <meta
           name="description"
           content="Provide high-quality ready mix concrete to clients."
+        />
+        <meta
+          name="keywords"
+          content="Conmix RMC Somnath,Surat Provide high-quality ready mix concrete to clients."
         />
 
         <meta property="og:title" content="Conmix RMC - Ready Mix Concrete" />
