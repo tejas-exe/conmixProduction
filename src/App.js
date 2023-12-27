@@ -13,50 +13,27 @@ import Services from "./components/serviceProjects/services";
 
 function App() {
   const scrollToElement = (element) => {
-    console.log("--------->", element);
     scroller.scrollTo(element, {
       duration: 800,
       delay: 0,
       smooth: "easeInOutQuart",
     });
   };
-  const pages = ["Home", "About Us", "Why Us", "Products", "Contact"];
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Conmix RMC - Ready Mix Concrete</title>
+        <title>Conmix RMC Somnath,Surat</title>
         <meta
           name="description"
           content="Provide high-quality ready mix concrete to clients."
         />
 
-        {/* OpenGraph tags for social media */}
         <meta property="og:title" content="Conmix RMC - Ready Mix Concrete" />
         <meta
           property="og:description"
           content="Provide high-quality ready mix concrete to clients."
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="URL_TO_YOUR_SOCIAL_MEDIA_IMAGE" />
-        <meta property="og:url" content="URL_TO_YOUR_WEBSITE" />
-
-        {/* Twitter card tags for social media */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Conmix RMC - Ready Mix Concrete" />
-        <meta
-          name="twitter:description"
-          content="Provide high-quality ready mix concrete to clients."
-        />
-        <meta name="twitter:image" content="URL_TO_YOUR_SOCIAL_MEDIA_IMAGE" />
-
-        {/* Viewport settings */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/* Favicon */}
-        <link rel="icon" type="image/png" href="URL_TO_YOUR_FAVICON" />
-
-        {/* Other meta tags as needed */}
       </Helmet>
       <Header />
       <Navbar scrollToElement={scrollToElement} />
