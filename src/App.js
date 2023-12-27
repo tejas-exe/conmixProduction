@@ -23,7 +23,7 @@ function App() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Conmix RMC Somnath,Surat</title>
+        {/* <title>Conmix RMC Somnath,Surat</title> */}
         <meta
           name="description"
           content="Provide high-quality ready mix concrete to clients."

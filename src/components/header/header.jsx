@@ -47,7 +47,7 @@ export function Header() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>CONMIX RMC - Ready Mix Concrete</title>
+        {/* <title>CONMIX RMC - Ready Mix Concrete</title> */}
         <meta
           name="description"
           content="Contact CONMIX RMC for high-quality ready mix concrete services. Call us at [Your Phone Number] or email us at [Your Email]. Follow us on social media for updates."
