@@ -1,6 +1,9 @@
+/* ===== PRODUCTS SECTION ===== */
 .productPage {
   padding: 50px;
+  background: linear-gradient(180deg, var(--off-white) 0%, var(--cream-soft) 100%);
 }
+
 .proudct1 {
   display: flex;
   flex-direction: column;
@@ -8,52 +11,85 @@
   margin: auto;
   padding: 0px;
 }
+
 .productBtn {
+  display: inline-block;
   text-align: center;
-  background-color: #fff5e0;
-  width: 150px;
+  background: linear-gradient(135deg, var(--cream) 0%, #ffe8b0 100%);
+  width: fit-content;
+  min-width: 150px;
+  font-family: var(--font-heading);
   font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   margin: auto;
-  border-radius: 20px;
-  padding: 5px 10px;
-  color: #000;
+  border-radius: var(--radius-xl);
+  padding: 8px 20px;
+  color: var(--charcoal);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
+
 .productHeading {
   margin: auto;
-  margin-top: 30px;
+  margin-top: 25px;
   margin-bottom: 50px;
-  font-weight: bolder;
-  color: #c70039;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  color: var(--brand-red);
 }
+
 .productcontainer {
   padding: 10px;
-  /* width: 500px; 
-  height: 500px;  */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-img.productIMG {
-  border: red;
+.productcontainer img {
+  border-radius: var(--radius-md) !important;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  box-shadow: var(--shadow-md);
 }
-/* @media (max-width: 320px) {
-  .productcontainer {
-    width: 500px; 
-    height: 500px; 
-  }
-} */
+
+.productcontainer img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
+
+img.productIMG {
+  border: none;
+}
 
 .functionImage {
   width: 80%;
   height: 310px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-smooth);
+}
+
+.functionImage:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+  .productPage {
+    padding: 30px 15px;
+  }
+  .productHeading {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 425px) {
   .functionImage {
     width: 100%;
     height: 200px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
   }
 }

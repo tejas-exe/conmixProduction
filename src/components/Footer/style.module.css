@@ -1,15 +1,21 @@
+/* ===== FOOTER ===== */
 .copyright {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  p {
-    margin: 0;
-  }
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  border-top: 3px solid var(--brand-red);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.copyright p {
+  margin: 0;
+  font-family: var(--font-body);
+}

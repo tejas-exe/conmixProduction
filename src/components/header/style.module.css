@@ -1,5 +1,10 @@
+/* ===== HEADER (Social Bar) ===== */
 @media (max-width: 768px) {
   .resp {
     display: none;
   }
+}
+
+.socials {
+  margin-left: auto !important;
 }

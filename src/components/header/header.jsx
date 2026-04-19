@@ -57,10 +57,11 @@ export function Header() {
       <div className={s.resp}>
         <AppBar
           sx={{
-            backgroundColor: "#FFFFFF",
-            color: "#000000",
-            borderBottom: 1,
+            background: "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
+            color: "#fff5e0",
+            borderBottom: "none",
             position: "inherit",
+            boxShadow: "none",
           }}
         >
           <Toolbar sx={{ mx: 9, my: -2 }}>
@@ -87,16 +88,16 @@ export function Header() {
             </Typography> */}
             <Stack direction="row" spacing={2} className={s.socials}>
               <IconButton color="primary" onClick={handleFBIconClick}>
-                <FacebookIcon fontSize="small" style={{ color: "#c70039" }} />
+                <FacebookIcon fontSize="small" style={{ color: "#fff5e0" }} />
               </IconButton>
               <IconButton color="primary" onClick={handleInstaIconClick}>
-                <InstagramIcon fontSize="small" style={{ color: "#c70039" }} />
+                <InstagramIcon fontSize="small" style={{ color: "#fff5e0" }} />
               </IconButton>
               <IconButton color="primary" onClick={handleUtubeIconClick}>
-                <YouTubeIcon fontSize="small" style={{ color: "#c70039" }} />
+                <YouTubeIcon fontSize="small" style={{ color: "#fff5e0" }} />
               </IconButton>
               <IconButton color="primary" onClick={handleTwitterIconClick}>
-                <TwitterIcon fontSize="small" style={{ color: "#c70039" }} />
+                <TwitterIcon fontSize="small" style={{ color: "#fff5e0" }} />
               </IconButton>
             </Stack>
           </Toolbar>

@@ -99,13 +99,15 @@ function Navbar({ scrollToElement }) {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "white", color: "black" }}>
+    <AppBar position="sticky" sx={{ backgroundColor: "rgba(255, 255, 255, 0.85)", backdropFilter: "blur(12px)", color: "black", boxShadow: "0 1px 20px rgba(0,0,0,0.06)", borderBottom: "1px solid rgba(0,0,0,0.04)", zIndex: 1100 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img
             src="https://drive.google.com/uc?id=15XnH83PP4JrNnXqCf-A30oq1nYgkpkWy"
             alt="LOGO"
-            style={{ width: "50px" }}
+            style={{ width: "50px", borderRadius: "8px", transition: "transform 0.3s ease" }}
+            onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.08)"}
+            onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
           />
           <Typography
             variant="h6"
@@ -113,14 +115,17 @@ function Navbar({ scrollToElement }) {
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              ml: 5,
+              ml: 3,
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              fontFamily: "'Outfit', sans-serif",
               fontWeight: 800,
-              letterSpacing: ".3rem",
+              fontSize: "1.4rem",
+              letterSpacing: ".2rem",
               textDecoration: "none",
-              color: "#000",
+              color: "#1a1a1a",
+              transition: "color 0.3s ease",
+              '&:hover': { color: '#c70039' },
             }}
           >
             CONMIX RMC
@@ -222,9 +227,28 @@ function Navbar({ scrollToElement }) {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: "black",
+                  color: "#1a1a1a",
                   display: "block",
-                  fontWeight: 800,
+                  fontFamily: "'Outfit', sans-serif",
+                  fontWeight: 600,
+                  fontSize: "0.9rem",
+                  letterSpacing: "0.5px",
+                  position: "relative",
+                  transition: "color 0.3s ease",
+                  '&:hover': { color: '#c70039', backgroundColor: 'transparent' },
+                  '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    bottom: '6px',
+                    left: '50%',
+                    transform: 'translateX(-50%) scaleX(0)',
+                    width: '60%',
+                    height: '2px',
+                    backgroundColor: '#c70039',
+                    transition: 'transform 0.3s ease',
+                    borderRadius: '2px',
+                  },
+                  '&:hover::after': { transform: 'translateX(-50%) scaleX(1)' },
                 }}
               >
                 {page}

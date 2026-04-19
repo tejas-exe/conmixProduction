@@ -48,20 +48,22 @@ export function AboutUs() {
             </p>
           </div>
         </Grid>
+        {/* https://drive.google.com/uc?id=1Bqqq1E9SGp66-bvvTLH-NHGgPlPgmTDt */}
+        {/* https://drive.google.com/uc?id=1M6bp8xn6bYmM-iaIzHv-sacVPF7jRNYg */}
         <Grid xs={12} sm={12} lg={6}>
           <div className="container">
             <div className="image-stack">
               <div className="image-stack__item image-stack__item--top">
                 <img
-                  class="image"
-                  src="https://drive.google.com/uc?id=1Bqqq1E9SGp66-bvvTLH-NHGgPlPgmTDt"
+                  className="image"
+                  src="/fb1.jpg"
                   alt="CONMIX ONE"
                 />
               </div>
               <div className="image-stack__item image-stack__item--bottom">
                 <img
-                  class="image"
-                  src="https://drive.google.com/uc?id=1M6bp8xn6bYmM-iaIzHv-sacVPF7jRNYg"
+                  className="image"
+                  src="/fb2.jpg"
                   alt="CONMIX TWO"
                 />
               </div>
