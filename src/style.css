@@ -168,3 +168,22 @@ a {
 .animate-fade-in {
   animation: fadeInUp 0.8s ease-out forwards;
 }
+
+/* ===== MODERN GLASSMORPHISM UTILITIES ===== */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-lg);
+}
+
+.glass-panel-dark {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-lg);
+}
