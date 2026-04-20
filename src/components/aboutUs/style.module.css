@@ -3,8 +3,8 @@
   overflow: hidden;
   padding: 140px 0 128px;
   background:
-    radial-gradient(circle at top left, rgba(199, 0, 57, 0.08), transparent 28%),
-    linear-gradient(180deg, #fff9ee 0%, #fff5e0 50%, #fffdf8 100%);
+    radial-gradient(circle at top left, rgba(199, 0, 57, 0.04), transparent 28%),
+    linear-gradient(180deg, rgba(255, 249, 238, 0.2) 0%, rgba(255, 245, 224, 0.14) 50%, rgba(255, 253, 248, 0.18) 100%);
 }
 
 .glowTop,
@@ -48,9 +48,10 @@
   padding: 42px;
   padding-right: 48px;
   border-radius: 34px;
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.24);
   border: 1px solid rgba(26, 26, 26, 0.05);
   box-shadow: 0 24px 54px rgba(35, 24, 11, 0.06);
+  backdrop-filter: blur(12px);
   animation: fadeUp 0.8s ease both;
 }
 
@@ -106,8 +107,9 @@
   padding: 24px 22px;
   border: 1px solid rgba(26, 26, 26, 0.06);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.42);
   box-shadow: 0 20px 40px rgba(40, 29, 16, 0.06);
+  backdrop-filter: blur(10px);
 }
 
 .highlightCard strong {
@@ -131,9 +133,10 @@
 .visualStageShell {
   padding: 34px;
   border-radius: 38px;
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.24);
   border: 1px solid rgba(26, 26, 26, 0.05);
   box-shadow: 0 24px 54px rgba(35, 24, 11, 0.06);
+  backdrop-filter: blur(12px);
 }
 
 .stageGrid {
@@ -215,9 +218,10 @@
   height: 100%;
   padding: 38px;
   border-radius: 34px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.36);
   border: 1px solid rgba(26, 26, 26, 0.06);
   box-shadow: 0 22px 50px rgba(35, 24, 11, 0.08);
+  backdrop-filter: blur(12px);
 }
 
 .panelIntro {
@@ -276,8 +280,9 @@
   gap: 14px;
   padding: 18px 20px;
   border-radius: 20px;
-  background: rgba(255, 245, 224, 0.9);
+  background: rgba(255, 245, 224, 0.56);
   color: rgba(26, 26, 26, 0.82);
+  backdrop-filter: blur(8px);
 }
 
 .trustDot {

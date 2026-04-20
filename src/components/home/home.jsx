@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-scroll";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import s from "./style.module.css";
@@ -80,9 +81,15 @@ export function Home() {
                     <p className={s.sliderContent}>{slide.description}</p>
 
                     <div className={s.actionRow}>
-                      <a href="/contact" className={s.primaryAction}>
+                      <Link
+                        to="Contact"
+                        smooth="easeInOutQuart"
+                        duration={800}
+                        offset={-40}
+                        className={s.primaryAction}
+                      >
                         Request a Quote
-                      </a>
+                      </Link>
                       <div className={s.signalBadge}>
                         <span className={s.signalDot} />
                         Quality-Controlled Deliveries

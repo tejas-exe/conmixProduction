@@ -3,8 +3,8 @@
   overflow: hidden;
   padding: 140px 0 128px;
   background:
-    radial-gradient(circle at top left, rgba(199, 0, 57, 0.08), transparent 28%),
-    linear-gradient(180deg, rgba(255, 249, 238, 0.9) 0%, rgba(255, 245, 224, 0.86) 48%, rgba(255, 253, 248, 0.96) 100%);
+    radial-gradient(circle at top left, rgba(199, 0, 57, 0.04), transparent 28%),
+    linear-gradient(180deg, rgba(255, 249, 238, 0.18) 0%, rgba(255, 245, 224, 0.12) 48%, rgba(255, 253, 248, 0.18) 100%);
 }
 
 .glowTop,
@@ -42,9 +42,10 @@
 .contactShell {
   padding: 42px;
   border-radius: 36px;
-  background: rgba(255, 255, 255, 0.52);
+  background: rgba(255, 255, 255, 0.24);
   border: 1px solid rgba(26, 26, 26, 0.05);
   box-shadow: 0 24px 54px rgba(35, 24, 11, 0.06);
+  backdrop-filter: blur(12px);
 }
 
 .contactIntro,
@@ -52,9 +53,10 @@
   height: 100%;
   padding: 38px;
   border-radius: 34px;
-  background: rgba(255, 255, 255, 0.74);
+  background: rgba(255, 255, 255, 0.34);
   border: 1px solid rgba(26, 26, 26, 0.06);
   box-shadow: 0 22px 50px rgba(35, 24, 11, 0.08);
+  backdrop-filter: blur(12px);
 }
 
 .contactIntro {
@@ -101,8 +103,9 @@
   margin-top: 28px;
   padding: 30px 26px;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 245, 224, 0.96), rgba(255, 255, 255, 0.94));
+  background: linear-gradient(180deg, rgba(255, 245, 224, 0.58), rgba(255, 255, 255, 0.46));
   border: 1px solid rgba(26, 26, 26, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .brandMark {
@@ -179,8 +182,9 @@
   padding: 1rem 1.1rem !important;
   border: 1px solid rgba(26, 26, 26, 0.08) !important;
   border-radius: 18px !important;
-  background: rgba(255, 249, 238, 0.9) !important;
+  background: rgba(255, 249, 238, 0.5) !important;
   box-shadow: none !important;
+  backdrop-filter: blur(8px);
 }
 
 .formField:focus {
@@ -225,14 +229,15 @@
   grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
   overflow: hidden;
   border-radius: 34px;
-  background: rgba(255, 255, 255, 0.74);
+  background: rgba(255, 255, 255, 0.34);
   border: 1px solid rgba(26, 26, 26, 0.06);
   box-shadow: 0 22px 50px rgba(35, 24, 11, 0.08);
+  backdrop-filter: blur(12px);
 }
 
 .mapFrame {
   min-height: 320px;
-  background: rgba(255, 248, 235, 0.8);
+  background: rgba(255, 248, 235, 0.34);
 }
 
 .addressPanel {
