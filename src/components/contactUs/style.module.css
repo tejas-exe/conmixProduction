@@ -125,6 +125,12 @@
   line-height: 1.6;
 }
 
+.contactInfoRow span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .infoIcon {
   display: inline-flex;
   align-items: center;
@@ -198,6 +204,7 @@
 
 .submitButton {
   min-height: 56px !important;
+  width: 100%;
   border-radius: 18px !important;
   background: linear-gradient(135deg, #c70039 0%, #8c1734 100%) !important;
   box-shadow: 0 18px 30px rgba(199, 0, 57, 0.18) !important;
@@ -312,17 +319,81 @@
     border-radius: 24px;
   }
 
+  .contactIntro,
+  .formShell {
+    gap: 16px;
+  }
+
   .getintouchTitle,
   .visitusHeader {
     font-size: clamp(2rem, 10vw, 3rem);
   }
 
+  .contactLead,
+  .visitLead {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .contactCard {
+    margin-top: 18px;
+    padding: 20px 18px;
+    border-radius: 22px;
+    gap: 14px;
+  }
+
+  .brandMark {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+    letter-spacing: 0.05em;
+  }
+
+  .contactInfoRow {
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.94rem;
+  }
+
+  .infoIcon {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+  }
+
+  .formHeader {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .formHeader h2 {
+    max-width: 100%;
+    font-size: clamp(1.55rem, 8vw, 2.1rem);
+  }
+
   .formTwoCol {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .formGrid {
+    gap: 14px;
+  }
+
+  .formField {
+    min-height: 54px;
+    padding: 0.95rem 1rem !important;
   }
 
   .visitUsGrid {
     margin-top: 72px;
+  }
+
+  .visitHeader {
+    padding: 0;
+  }
+
+  .locationList {
+    gap: 20px;
+    margin-top: 22px;
   }
 
   .locationCard {
@@ -330,11 +401,45 @@
   }
 
   .mapFrame {
-    min-height: 240px;
+    min-height: 220px;
   }
 
   .addressPanel {
     padding: 22px;
+    gap: 12px;
+  }
+
+  .mapTitle {
+    font-size: 1.25rem;
+  }
+
+  .addressText {
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 420px) {
+  .contactShell,
+  .visitUsGrid {
+    width: calc(100% - 20px);
+  }
+
+  .contactShell,
+  .contactIntro,
+  .formShell {
+    padding: 16px;
+  }
+
+  .contactBtn,
+  .formTag {
+    padding: 8px 14px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+
+  .submitButton {
+    min-height: 52px !important;
   }
 }
 
