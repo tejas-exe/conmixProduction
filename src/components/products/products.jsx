@@ -1,121 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+import { Grid } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChartArea,
+  faGears,
+  faHandshake,
+  faMicrochip,
+  faThumbsUp,
+  faTruck,
+} from "@fortawesome/free-solid-svg-icons";
+import s from "./style.module.css";
 import img1 from "../../assets/manufacturing.jpg";
 import img2 from "../../assets/technology.jpg";
-
 import img3 from "../../assets/jpeg-optimizer_top notch quality.jpg";
 import img4 from "../../assets/jpeg-optimizer_supplier.jpg";
 import img5 from "../../assets/outsource.jpg";
 import img6 from "../../assets/jpeg-optimizer_area of product applications.jpg";
 
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-import { Button, Grid } from "@mui/material";
-import s from "./style.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGears } from "@fortawesome/free-solid-svg-icons";
-import {
-  faMicrochip,
-  faThumbsUp,
-  faTruck,
-  faHandshake,
-  faChartArea,
-} from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-
-const btnStyle = {
-  margin: "5px",
-  textAlign: "center",
-  padding: "10px",
-  borderRadius: "1px",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  cursor: "pointer",
-  width: "80%",
-  color: "#c70039",
-};
-const selectedBtnStyle = {
-  ...btnStyle,
-  backgroundColor: "#fff5e0",
-};
 function SampleArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        display: "flex",
-        // width: "50px",
-        // height: "50px",
-        borderRadius: "20px",
-        textAlign: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "gray",
-        zIndex: 1,
-      }}
-      onClick={onClick}
-    />
-  );
+  const { className, onClick } = props;
+
+  return <div className={`${className} ${s.sliderArrow}`} onClick={onClick} />;
 }
+
+const galleryImages = [
+  "/p1.jpeg",
+  "/p2.jpeg",
+  "/p3.jpeg",
+  "/p4.jpeg",
+  "/p5.jpeg",
+  "/p6.jpeg",
+  "/p7.jpeg",
+  "/p8.jpeg",
+];
+
+const drawerDetails = [
+  {
+    id: "1",
+    title: "Manufacturing",
+    details:
+      "Embark on a journey through the heart of ConMix's manufacturing excellence. Our state-of-the-art facilities blend precision and innovation to create ready-mix concrete that sets the standard for quality in the construction industry.",
+    image: img1,
+  },
+  {
+    id: "2",
+    title: "Technology",
+    details:
+      "At ConMix, we embrace the forefront of technology to redefine concrete solutions. Advanced techniques and process control help every batch meet the demands of modern construction.",
+    image: img2,
+  },
+  {
+    id: "3",
+    title: "Top Notch Quality",
+    details:
+      "Quality is not just a promise; it is a commitment built into every cubic meter. Our quality control measures help ensure durability, reliability, and stronger long-term performance on site.",
+    image: img3,
+  },
+  {
+    id: "4",
+    title: "Supplier",
+    details:
+      "Trust ConMix as a reliable construction partner. We maintain consistent supply, timely deliveries, and dependable quality that helps teams keep progress steady.",
+    image: img4,
+  },
+  {
+    id: "5",
+    title: "Outsource Work",
+    details:
+      "Simplify your construction workflow by outsourcing concrete production and delivery to ConMix. This lets your team stay focused on execution while we manage concrete readiness efficiently.",
+    image: img5,
+  },
+  {
+    id: "6",
+    title: "Area of Product Application",
+    details:
+      "From residential builds to large-scale infrastructure, ConMix ready-mix concrete supports a wide range of applications with strength, consistency, and reliable performance.",
+    image: img6,
+  },
+];
+
+const buttonData = [
+  { icon: faGears, index: 0, label: "Manufacturing" },
+  { icon: faMicrochip, index: 1, label: "Technology" },
+  { icon: faThumbsUp, index: 2, label: "Top Notch Quality" },
+  { icon: faTruck, index: 3, label: "Supplier" },
+  { icon: faHandshake, index: 4, label: "Outsource Work" },
+  { icon: faChartArea, index: 5, label: "Product Application" },
+];
+
 export default function Products() {
-  const images = [
-    "/p1.jpeg",
-    "/p2.jpeg",
-    "/p3.jpeg",
-    "/p4.jpeg",
-    "/p5.jpeg",
-    "/p6.jpeg",
-    "/p7.jpeg",
-    "/p8.jpeg",
-  ];
-  const drawerDetails = [
-    {
-      id: "1",
-      title: "Manufacturing",
-      details:
-        "Embark on a journey through the heart of ConMix's manufacturing excellence. Our state-of-the-art facilities blend precision and innovation to create ready-mix concrete that sets the standard for quality in the construction industry. Explore the meticulous process that brings your projects to life.",
-      image: img1,
-    },
-    {
-      id: "2",
-      title: "Technology",
-      details:
-        "At ConMix, we embrace the forefront of technology to redefine concrete solutions. Dive into a world where cutting-edge innovations and advanced techniques merge, ensuring that every batch of our ready-mix concrete meets and exceeds the demands of modern construction",
-      image: img2,
-    },
-    {
-      id: "3",
-      title: "Top Notch Quality",
-      details:
-        "Quality is not just a promise; it's a commitment etched in every cubic meter of ConMix concrete. Learn about our stringent quality control measures that guarantee top-notch durability and reliability. Elevate your projects with concrete that stands the test of time.",
-      image: img3,
-    },
-    {
-      id: "4",
-      title: "Supplier",
-      details:
-        "Trust ConMix as your reliable partner in construction. As your dedicated supplier, we ensure a seamless and consistent source of ready-mix concrete for your projects. Experience the ConMix advantage—timely deliveries and unwavering quality that fuels your success.",
-      image: img4,
-    },
-    {
-      id: "5",
-      title: "Outsource Work",
-      details:
-        "Simplify your construction processes by entrusting ConMix with your concrete needs. Outsource the intricacies of concrete production and delivery to us, allowing you to focus on your core competencies. Discover how ConMix streamlines your construction journey with efficiency and cost-effectiveness.",
-      image: img5,
-    },
-    {
-      id: "6",
-      title: "Area of Product Application",
-      details:
-        "Explore the diverse applications of ConMix ready-mix concrete across a spectrum of construction projects. From residential builds to large-scale infrastructure, witness how our concrete seamlessly integrates, providing strength and reliability to every corner of your project. Your vision, our concrete",
-      image: img6,
-    },
-  ];
-  var settings = {
+  const [detailIndex, setDetailIndex] = useState(0);
+
+  const settings = {
     className: "center",
     centerMode: true,
     infinite: true,
@@ -128,7 +105,7 @@ export default function Products() {
     nextArrow: <SampleArrow />,
     prevArrow: <SampleArrow />,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2200,
     pauseOnDotsHover: true,
     pauseOnHover: true,
     initialSlide: 0,
@@ -136,22 +113,17 @@ export default function Products() {
       {
         breakpoint: 1440,
         settings: {
-          className: "center",
           centerMode: true,
-          infinite: true,
-          centerPadding: "60px",
-          speed: 500,
+          centerPadding: "44px",
           slidesToShow: 3,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: true,
-          nextArrow: <SampleArrow />,
-          prevArrow: <SampleArrow />,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          pauseOnDotsHover: true,
-          pauseOnHover: true,
-          initialSlide: 0,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          centerMode: true,
+          centerPadding: "28px",
+          slidesToShow: 2,
         },
       },
       {
@@ -159,13 +131,7 @@ export default function Products() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          centerPadding: "28px",
         },
       },
       {
@@ -173,141 +139,89 @@ export default function Products() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerPadding: "9px",
-        },
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerPadding: "5px",
-          dots: false,
+          centerPadding: "10px",
         },
       },
     ],
   };
-  const [detailIndex, setDetailIndex] = useState(0);
-  const [selectedButton, setSelectedButton] = useState(null);
-  const buttonData = [
-    { icon: faGears, index: 0, label: "Manufacturing" },
-    { icon: faMicrochip, index: 1, label: "Technology" },
-    { icon: faThumbsUp, index: 2, label: "Top notch quality" },
-    { icon: faTruck, index: 3, label: "Supplier" },
-    { icon: faHandshake, index: 4, label: "Outsource work" },
-    { icon: faChartArea, index: 5, label: "Area of product application" },
-  ];
-  const handleButtonClick = (index) => {
-    setSelectedButton(index);
-    setDetailIndex(index);
-  };
+
   return (
-    <>
+    <section className={s.productsSection}>
+      <div className={s.glowTop} />
+      <div className={s.glowBottom} />
+
       <div className={s.productPage}>
         <div className={s.proudct1}>
-          <span className={s.productBtn}>Proudct Usage</span>
+          <span className={s.productBtn}>Product Usage</span>
           <h1 className={s.productHeading}>Our Products</h1>
+          <p className={s.productLead}>
+            Explore how Conmix combines manufacturing strength, technology, and
+            product versatility to support modern construction with dependable
+            ready-mix concrete solutions.
+          </p>
         </div>
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index} className={s.productcontainer}>
-              <img
-                src={image}
-                alt={`Product ${index}`}
-                className={s.productIMG}
-                style={{
-                  height: "100%",
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                  display: "block",
-                  margin: "0 auto",
-                  borderRadius: "8px",
-                }}
-              ></img>
-            </div>
-          ))}
-        </Slider>
-      </div>
-      <Grid
-        container
-        spacing={3}
-        sx={{
-          width: "95%", // Set width to 95%
-          margin: "auto",
-          "@media (max-width: 600px)": {
-            width: "100%", // Set width to 100% on screens with max width 600px
-            padding: "0", // Remove padding
-            margin: "-10px", // Remove margin
-          },
-        }}
-      >
-        <Grid item xs={12} md={6}>
-          <div
-            style={{
-              // background: "lightgrey",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {buttonData.map(({ icon, index, label }) => (
-              <Button
-                key={index}
-                sx={selectedButton === index ? selectedBtnStyle : btnStyle}
-                onClick={() => handleButtonClick(index)}
-              >
-                <FontAwesomeIcon
-                  icon={icon}
-                  size="2xl"
-                  style={{ marginBottom: "8px", color: "#000" }}
-                />
-                <h5 style={{ margin: "0" }}>{label}</h5>
-              </Button>
+
+        <div className={s.sliderShell}>
+          <Slider {...settings}>
+            {galleryImages.map((image, index) => (
+              <div key={image} className={s.productcontainer}>
+                <div className={s.galleryCard}>
+                  <img
+                    src={image}
+                    alt={`Product showcase ${index + 1}`}
+                    className={s.productIMG}
+                  />
+                </div>
+              </div>
             ))}
+          </Slider>
+        </div>
+      </div>
+
+      <Grid container spacing={{ xs: 3, md: 4 }} className={s.detailSection}>
+        <Grid item xs={12} md={5}>
+          <div className={s.buttonPanel}>
+            <span className={s.panelTag}>Capabilities</span>
+            <h2 className={s.panelTitle}>Select a focus area to explore our product strengths</h2>
+
+            <div className={s.buttonList}>
+              {buttonData.map(({ icon, index, label }) => (
+                <button
+                  key={label}
+                  type="button"
+                  className={`${s.optionButton} ${
+                    detailIndex === index ? s.optionButtonActive : ""
+                  }`}
+                  onClick={() => setDetailIndex(index)}
+                >
+                  <span className={s.optionIcon}>
+                    <FontAwesomeIcon icon={icon} />
+                  </span>
+                  <span className={s.optionText}>{label}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <div
-            style={{
-              margin: "20px",
-              padding: "20px",
-              // border: "1px solid #ccc",
-              borderRadius: "8px",
-              textAlign: "center",
-              backgroundColor: "white",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              "@media (max-width: 600px)": {
-                width: "100%", // Set width to 100% on screens with max width 600px
-                padding: "0", // Remove padding
-                margin: "0", // Remove margin
-              },
-            }}
-          >
-            <img
-              className={s.functionImage}
-              src={drawerDetails[detailIndex].image}
-              alt=""
-              loading="lazy"
-            // style={{}}
-            />
-            <h6
-              style={{
-                marginTop: "10px",
-                marginBottom: "5px",
-                fontSize: "1.2em",
-                color: "#c70039",
-                fontWeight: "bold",
-              }}
-            >
-              {drawerDetails[detailIndex].title}
-            </h6>
-            <p style={{ margin: "0", fontSize: "1em" }}>
-              {drawerDetails[detailIndex].details}
-            </p>
+
+        <Grid item xs={12} md={7}>
+          <div className={s.detailCard}>
+            <div className={s.detailImageWrap}>
+              <img
+                className={s.functionImage}
+                src={drawerDetails[detailIndex].image}
+                alt={drawerDetails[detailIndex].title}
+                loading="lazy"
+              />
+            </div>
+            <div className={s.detailContent}>
+              <span className={s.detailTag}>Conmix insight</span>
+              <h3 className={s.detailTitle}>{drawerDetails[detailIndex].title}</h3>
+              <p className={s.detailText}>{drawerDetails[detailIndex].details}</p>
+            </div>
           </div>
         </Grid>
       </Grid>
-    </>
+    </section>
   );
 }

@@ -1,188 +1,342 @@
-/* ===== CONTACT US SECTION ===== */
 .contactPage {
-  background: linear-gradient(180deg, var(--off-white) 0%, #f0ece4 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 140px 0 128px;
+  background:
+    radial-gradient(circle at top left, rgba(199, 0, 57, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255, 249, 238, 0.9) 0%, rgba(255, 245, 224, 0.86) 48%, rgba(255, 253, 248, 0.96) 100%);
+}
+
+.glowTop,
+.glowBottom {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.glowTop {
+  top: -70px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(236, 150, 78, 0.18), transparent 68%);
+}
+
+.glowBottom {
+  bottom: 70px;
+  left: -70px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(19, 29, 43, 0.08), transparent 70%);
+}
+
+.contactShell,
+.visitUsGrid {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, calc(100% - 96px));
+  margin: 0 auto;
+}
+
+.contactShell {
+  padding: 42px;
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(26, 26, 26, 0.05);
+  box-shadow: 0 24px 54px rgba(35, 24, 11, 0.06);
+}
+
+.contactIntro,
+.formShell {
+  height: 100%;
+  padding: 38px;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(26, 26, 26, 0.06);
+  box-shadow: 0 22px 50px rgba(35, 24, 11, 0.08);
+}
+
+.contactIntro {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.contactBtn,
+.formTag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #131d2b 0%, #24344a 100%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.getintouchTitle,
+.visitusHeader {
+  margin-top: 18px;
+  color: var(--charcoal);
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.03;
+}
+
+.contactLead,
+.visitLead {
+  margin-top: 10px;
+  color: rgba(26, 26, 26, 0.74);
+  line-height: 1.9;
+}
+
+.contactCard {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+  padding: 30px 26px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 245, 224, 0.96), rgba(255, 255, 255, 0.94));
+  border: 1px solid rgba(26, 26, 26, 0.05);
+}
+
+.brandMark {
+  color: #c70039;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contactInfoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(26, 26, 26, 0.78);
+  line-height: 1.6;
+}
+
+.infoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  background: rgba(199, 0, 57, 0.08);
+  color: #c70039;
+  flex: 0 0 auto;
+}
+
+.phoneList {
+  display: grid;
+  gap: 12px;
+}
+
+.formShell {
+  animation: fadeUp 0.8s ease 0.15s both;
+}
+
+.formHeader {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.formTag {
+  padding: 0;
+  background: transparent;
+  color: #b31640;
+}
+
+.formHeader h2 {
+  max-width: 14ch;
+  color: var(--charcoal);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.formGrid {
+  display: grid;
+  gap: 18px;
+}
+
+.formTwoCol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.formField {
+  width: 100%;
+  min-height: 58px;
+  padding: 1rem 1.1rem !important;
+  border: 1px solid rgba(26, 26, 26, 0.08) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 249, 238, 0.9) !important;
+  box-shadow: none !important;
+}
+
+.formField:focus {
+  border-color: rgba(199, 0, 57, 0.28) !important;
+  box-shadow: 0 0 0 4px rgba(199, 0, 57, 0.08) !important;
+}
+
+.messageField {
+  min-height: 150px;
+}
+
+.submitButton {
+  min-height: 56px !important;
+  border-radius: 18px !important;
+  background: linear-gradient(135deg, #c70039 0%, #8c1734 100%) !important;
+  box-shadow: 0 18px 30px rgba(199, 0, 57, 0.18) !important;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #c70039 0%, #8c1734 100%) !important;
 }
 
 .visitUsGrid {
-  padding-left: 144px;
-  padding-right: 144px;
+  margin-top: 96px;
 }
 
-.visitusinnerDiv {
-  padding: 30px;
+.visitHeader {
+  display: grid;
+  gap: 10px;
+  padding: 0 6px;
+  animation: fadeUp 0.8s ease 0.2s both;
 }
 
-.contact1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.locationList {
+  display: grid;
+  gap: 28px;
+  margin-top: 30px;
 }
 
-.contactBtn {
-  display: inline-block;
-  text-align: center;
-  background: linear-gradient(135deg, var(--cream) 0%, #ffe8b0 100%);
-  width: fit-content;
-  min-width: 150px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin: auto;
-  border-radius: var(--radius-xl);
-  padding: 8px 20px;
-  color: var(--charcoal);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+.locationCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  overflow: hidden;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(26, 26, 26, 0.06);
+  box-shadow: 0 22px 50px rgba(35, 24, 11, 0.08);
 }
 
-.contactBtnNo {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 98px;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--cream) 0%, #fff0cc 100%);
-  width: 100%;
-  font-weight: 500;
-  margin: auto;
-  padding: 10px 20px;
-  color: var(--charcoal);
-  border-bottom: 4px solid var(--brand-red);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+.mapFrame {
+  min-height: 320px;
+  background: rgba(255, 248, 235, 0.8);
 }
 
-.contactBtnNo:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.mapPaper {
-  padding: 20px;
-  width: 100%;
-  height: 250px;
-}
-
-.addressGrid {
-  background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-red-dark) 100%);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: var(--cream);
-  padding: 10px;
-  border-radius: var(--radius-sm);
-}
-
-.paper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #040965 0%, #0a0f7a 100%) !important;
-  color: white !important;
-  margin-bottom: 2%;
-  padding: 1rem;
-  border-radius: var(--radius-md);
+.addressPanel {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 34px;
+  background: linear-gradient(135deg, #131d2b 0%, #24344a 100%);
+  color: #fff;
 }
 
 .mapTitle {
-  text-align: center;
-  font-family: var(--font-heading);
-  font-weight: 700;
+  font-size: 1.55rem;
+  line-height: 1.2;
 }
 
-.MuiPaper-root {
-  padding-right: 0 !important;
+.addressText {
+  color: rgba(255, 245, 224, 0.84);
+  line-height: 1.9;
 }
 
-.visitusHeader {
-  font-size: 30px;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  padding-bottom: 10px;
-  color: var(--charcoal);
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.getintouchTitle {
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 50px;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 2.2rem;
-  letter-spacing: -0.5px;
-  color: var(--brand-red);
-}
+@media (max-width: 1023px) {
+  .contactPage {
+    padding: 108px 0 92px;
+  }
 
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 1.2rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid var(--gray-200);
-  appearance: none;
-  border-radius: var(--radius-sm);
-  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
+  .contactShell,
+  .visitUsGrid {
+    width: min(100%, calc(100% - 56px));
+  }
 
-.form-control:focus {
-  border-color: var(--brand-red);
-  box-shadow: 0 0 0 3px rgba(199, 0, 57, 0.1);
-  outline: none;
-}
+  .contactShell,
+  .contactIntro,
+  .formShell {
+    padding: 32px;
+  }
 
-.aboutUsPara {
-  margin-top: 30px;
-  color: #444;
-  line-height: 1.8;
-  font-weight: 400;
-  font-size: 15px;
+  .locationCard {
+    grid-template-columns: 1fr;
+  }
+
+  .addressPanel {
+    padding: 28px;
+  }
 }
 
 @media (max-width: 767px) {
-  .about1 {
-    margin: 8%;
+  .contactPage {
+    padding: 88px 0 80px;
   }
-}
 
-@media screen and (min-width: 320px) and (max-width: 1023px) {
-  .aboutUsPara {
-    line-height: 1.5;
-  }
+  .contactShell,
   .visitUsGrid {
-    padding-left: 20px;
-    padding-right: 20px;
+    width: calc(100% - 32px);
   }
-  .mapPaper {
-    padding: 20px;
-    width: 100%;
-    height: 500px;
+
+  .contactShell,
+  .contactIntro,
+  .formShell {
+    padding: 22px;
+    border-radius: 24px;
   }
-}
 
-.gridDiv {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  max-width: 75%;
-  margin: 0 auto 30px auto;
-  gap: 10px;
-}
+  .getintouchTitle,
+  .visitusHeader {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
 
-@media (max-width: 768px) {
-  .gridDiv {
+  .formTwoCol {
     grid-template-columns: 1fr;
   }
+
   .visitUsGrid {
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: 72px;
+  }
+
+  .locationCard {
+    border-radius: 24px;
+  }
+
+  .mapFrame {
+    min-height: 240px;
+  }
+
+  .addressPanel {
+    padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contactIntro,
+  .formShell,
+  .visitHeader {
+    animation: none !important;
   }
 }

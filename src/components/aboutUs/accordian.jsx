@@ -9,9 +9,13 @@ import Typography from "@mui/material/Typography";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
+  overflow: "hidden",
+  border: "1px solid rgba(17, 24, 39, 0.08)",
+  borderRadius: 22,
+  background: "rgba(255, 255, 255, 0.75)",
+  boxShadow: "0 18px 32px rgba(26, 26, 26, 0.06)",
   "&:not(:last-child)": {
-    borderBottom: 0,
+    marginBottom: 14,
   },
   "&:before": {
     display: "none",
@@ -24,22 +28,33 @@ const AccordionSummary = styled((props) => (
     {...props}
   />
 ))(({ theme }) => ({
-  backgroundColor:
+  padding: "4px 8px",
+  background:
     theme.palette.mode === "dark"
-      ? "rgba(255, 255, 255, .05)"
-      : "rgba(0, 0, 0, .03)",
+      ? "rgba(255, 255, 255, 0.05)"
+      : "linear-gradient(135deg, rgba(255, 245, 224, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%)",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
   },
+  "& .MuiAccordionSummary-expandIconWrapper": {
+    color: "#b31640",
+  },
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
+  },
+  "& .MuiTypography-root": {
+    fontFamily: '"Outfit", "Poppins", sans-serif',
+    fontWeight: 700,
+    color: "#1a1a1a",
   },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderTop: "1px solid rgba(0, 0, 0, .125)",
+  padding: theme.spacing(0, 2.5, 2.5),
+  borderTop: "1px solid rgba(17, 24, 39, 0.06)",
+  color: "rgba(26, 26, 26, 0.74)",
+  lineHeight: 1.8,
 }));
 
 export default function CustomizedAccordions() {

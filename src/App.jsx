@@ -6,6 +6,7 @@ import { Header } from "./components/header/header";
 import { Home } from "./components/home/home";
 import Products from "./components/products/products";
 import Contacts from "./components/contactUs/contactUs";
+import Grainient from "./components/grainient/Grainient";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/Footer/footer";
 import WhyUs from "./components/whyus/whyus";
@@ -20,7 +21,35 @@ function App() {
     });
   };
   return (
-    <>
+    <div className="site-shell">
+      <div className="site-background" aria-hidden="true">
+        <Grainient
+          className="site-grainient"
+          color1="#ff9f9f"
+          color2="#ffffff"
+          color3="#F43F5E"
+          timeSpeed={0.25}
+          colorBalance={0.0}
+          warpStrength={1.0}
+          warpFrequency={5.0}
+          warpSpeed={2.0}
+          warpAmplitude={50.0}
+          blendAngle={0.0}
+          blendSoftness={0.05}
+          rotationAmount={500.0}
+          noiseScale={2.0}
+          grainAmount={0.1}
+          grainScale={2.0}
+          grainAnimated={false}
+          contrast={1.5}
+          gamma={1.0}
+          saturation={1.0}
+          centerX={0.0}
+          centerY={0.0}
+          zoom={0.9}
+        />
+      </div>
+      <div className="site-content">
       <Helmet>
         <meta charSet="utf-8" />
         {/* <title>Conmix RMC Somnath,Surat</title> */}
@@ -60,7 +89,8 @@ function App() {
         <Contacts />
       </Element>
       <Footer />
-    </>
+      </div>
+    </div>
   );
 }
 
