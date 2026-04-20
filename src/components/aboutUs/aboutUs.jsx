@@ -56,14 +56,14 @@ export function AboutUs() {
               <div className="image-stack__item image-stack__item--top">
                 <img
                   className="image"
-                  src="/fb1.jpg"
+                  src="/ab1.jpg"
                   alt="CONMIX ONE"
                 />
               </div>
               <div className="image-stack__item image-stack__item--bottom">
                 <img
                   className="image"
-                  src="/fb2.jpg"
+                  src="/ab2.jpg"
                   alt="CONMIX TWO"
                 />
               </div>

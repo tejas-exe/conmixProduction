@@ -100,7 +100,7 @@ function Navbar({ scrollToElement }) {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img
-            src="https://drive.google.com/uc?id=15XnH83PP4JrNnXqCf-A30oq1nYgkpkWy"
+            src="/l.png"
             alt="LOGO"
             style={{ width: "50px", borderRadius: "8px", transition: "transform 0.3s ease" }}
             onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.08)"}

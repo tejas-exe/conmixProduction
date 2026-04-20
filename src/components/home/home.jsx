@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 
 export function Home() {
   // Local images for the slider
-  const images = ["/fb3.jpg", "/fb2.jpg"];
+  const images = ["/bg1.jpg", "/bg2.jpg"];
 
   return (
     <>

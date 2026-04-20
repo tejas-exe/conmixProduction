@@ -62,14 +62,14 @@ function SampleArrow(props) {
 }
 export default function Products() {
   const images = [
-    "https://drive.google.com/uc?export=view&id=1vqrskxUl4g21ahxm_YiTeS_QZmAOyeBi",
-    "https://drive.google.com/uc?export=view&id=1wUyjkA99YXv4IKSdJRNmpoSDF6joSGjG",
-    "https://drive.google.com/uc?export=view&id=1XY9Agd-_GFhCAMHqNhCOg785iNQpuc-x",
-    "https://drive.google.com/uc?export=view&id=1wmiP9dkKHTERp0YTlZtEmcsBaBpyD5O4",
-    "https://drive.google.com/uc?export=view&id=1Gl6epjuHCE4Fk2J1r197qbkR6rrTpxgM",
-    "https://drive.google.com/uc?export=view&id=1qQszFxxOxPG-iR9WOrQy4w3XBh0QtlC8",
-    "https://drive.google.com/uc?export=view&id=1VCJiFkKymaaE7MNyHtRPJNIQnLR7bLeP",
-    "https://drive.google.com/uc?export=view&id=1tv6c8hH57wkG5wjUufJUTMiO0preSd2B",
+    "/p1.jpeg",
+    "/p2.jpeg",
+    "/p3.jpeg",
+    "/p4.jpeg",
+    "/p5.jpeg",
+    "/p6.jpeg",
+    "/p7.jpeg",
+    "/p8.jpeg",
   ];
   const drawerDetails = [
     {
@@ -289,7 +289,7 @@ export default function Products() {
               src={drawerDetails[detailIndex].image}
               alt=""
               loading="lazy"
-              // style={{}}
+            // style={{}}
             />
             <h6
               style={{

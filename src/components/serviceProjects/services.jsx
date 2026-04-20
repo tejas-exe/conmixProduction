@@ -36,35 +36,35 @@ const Services = () => {
                 {
                   ongoingprojectTitle: "Vaishnodevi Kingsley",
                   ongoingprojectImg:
-                    "https://drive.google.com/uc?id=1BmizMlEUrj2hU16hxS0Z8P4GgNKu5tA-",
+                    "/g1.jpeg",
                   altText: "Vaishnodevi group",
                   link: "https://www.vaishnodevirealty.com/kingsley",
                 },
                 {
                   ongoingprojectTitle: "DMD Aura",
                   ongoingprojectImg:
-                    "https://drive.google.com/uc?id=1luidJGHQ0otY8Nhl0wzDzpYmq53bxdKy",
+                    "/g2.jpeg",
                   altText: "DMD Developers",
                   link: "https://www.dmddevelopers.com/project/dmd-aura",
                 },
                 {
                   ongoingprojectTitle: "Sangini Group Sunidhi Spinning",
                   ongoingprojectImg:
-                    "https://drive.google.com/uc?id=1w1UBqHlquKi8FBrEMy5gN22AU26cOAbY",
+                    "/g3.jpeg",
                   altText: "Sangini Group",
                   link: "https://www.sanginigroup.com/",
                 },
                 {
                   ongoingprojectTitle: "Rajhans Zesto",
                   ongoingprojectImg:
-                    "https://drive.google.com/uc?id=1ghjAE4M_tDxWaznm21AzRhg5QkLWWsBl",
+                    "/g4.jpeg",
                   altText: "Rajhans Desai-jain Group",
                   link: "https://rajhansrealty.co.in/zesto.aspx",
                 },
                 {
                   ongoingprojectTitle: "Santvan Newon",
                   ongoingprojectImg:
-                    "https://drive.google.com/uc?id=12ACqoywgOeCIsfV0mwJAM1awtO6HCKSb",
+                    "/g5.jpeg",
                   altText: "Santvan",
                   link: "https://www.santvangroup.com/",
                 },
@@ -128,35 +128,35 @@ const Services = () => {
             {
               ourcustomerTitle: "Anjani Group",
               ourcustomerImg:
-                "https://drive.google.com/uc?id=1Bk9CREcqxs_pr5gsys1DCWPeMwsOGYb_",
+                "/c1.jpeg",
               altText: "Vaishnodevi group",
               desc: "(Contact Person: Jayanti Bhai Aklera)",
             },
             {
               ourcustomerTitle: "SNS Group",
               ourcustomerImg:
-                "https://drive.google.com/uc?id=1bkyleDPG7StYS6gX-qh8rv1psGfDTk7r",
+                "/c2.jpeg",
               altText: "SNS Group",
               desc: "(Contact Person: Harshil Bhai | Bhavesh Bhai)",
             },
             {
               ourcustomerTitle: "Raghuvir Group",
               ourcustomerImg:
-                "https://drive.google.com/uc?id=15S70YrZ9NXupQ720bQTzk1wq4jCjnUel",
+                "/c3.jpeg",
               altText: "Raghuvir Group",
               desc: " (Contact Person: Shivlal Bhai | Asodaria Bhai)",
             },
             {
               ourcustomerTitle: "Vasupujya Group",
               ourcustomerImg:
-                "https://drive.google.com/uc?id=1h8M9btA69nC37IqYWXnLlwPt0R7YT2wI",
+                "/c4.jpeg",
               altText: "Vasupujya Group",
               desc: "(Contact Person: Mafat Bhai Siroya)",
             },
             {
               ourcustomerTitle: "Imperial developers",
               ourcustomerImg:
-                "https://drive.google.com/uc?id=1mbcnGCVWnnF2AU7qkyG1re-MbpRg6FTp",
+                "/c5.jpeg",
               altText: "Santvan",
               desc: "(Contact Person: Dipen Bhai | Kamlesh Bhai)",
             },
@@ -173,7 +173,7 @@ const Services = () => {
                 alt="Image Description"
               />
               <Typography variant="h6">{obj.ourcustomerTitle}</Typography>
-       
+
             </Grid>
           ))}
         </Grid>
